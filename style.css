@@ -1,0 +1,56 @@
+html,body{
+    height:100%; /*  للصفحة كلها حددت البودي انه ارتفاعه كل الصفحة عشان القياسات الباقية لو نسبة مئوية  كأنه جزء منها ويظبط معكم */
+}
+
+main{
+    height:100%;/* نفس الكومنت فوق للبودي*/
+}
+.orders-container{
+     width: 95%;               /* عرض الكونتينر كله */
+     height: 80%;          /*  ارتفاع الكونتينر*/
+  border: 3px solid black;    /* الإطار */
+  border-radius: 10px;        /* زوايا دائرية */
+  background-color: white;    /* خلفية بيضاء */
+  padding: 20px;                 /* مسافة للترتيب بين الكونتينر والاوردر*/
+  box-sizing: border-box;
+  overflow: auto ;               /*للسكرول*/
+  margin : auto;                /* عشان الكونتينر يتوسط بالنص*/
+}
+
+.order{
+   border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.buttons-area{
+    display:flex;
+    justify-content: space-between;
+    margin:20px auto auto auto ;
+    width:95%;
+    height:30%;
+}
+
+.request-service-link,
+.service-evaluation-link {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 36%;
+  height: 30%;
+  display: flex;
+  justify-content: center;  /* يوسّط أفقي */
+  align-items: center;      /* يوسّط عمودي */
+  
+}
+
+h3{
+    text-align: center;
+}
+.service-name{
+   text-align: center; 
+}
+.status{
+    text-align: center;
+}
+
