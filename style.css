@@ -5,7 +5,7 @@ html,body{
 main{
     height:100%;/* نفس الكومنت فوق للبودي*/
 }
-.orders-container{
+.orders-container , .services-container {
      width: 95%;               /* عرض الكونتينر كله */
      height: 80%;          /*  ارتفاع الكونتينر*/
   border: 3px solid black;    /* الإطار */
@@ -17,12 +17,23 @@ main{
   margin : auto;                /* عشان الكونتينر يتوسط بالنص*/
 }
 
+
+
 .order{
    border: 1px solid #bbb;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 15px;
 }
+
+.service{
+   border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 15px;
+}
+
+
 
 .buttons-area{
     display:flex;
@@ -33,7 +44,9 @@ main{
 }
 
 .request-service-link,
-.service-evaluation-link {
+.service-evaluation-link,
+.add-a-new-service-link ,
+.manage-staff-member-link{
   border: 2px solid black;
   border-radius: 10px;
   width: 36%;
@@ -45,7 +58,7 @@ main{
 }
 
 h3{
-    text-align: center;
+    text-align: center; font-size: 25px;
 }
 .service-name{
    text-align: center; 
@@ -54,3 +67,4 @@ h3{
     text-align: center;
 }
 
+h4{text-align: center; font-size: 1.5em;}
