@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+<header> Lenzah</header><!-- جزء سندس-->
+
+<main>
+
+<h2>Provider's Dashboard </h2>
+
+<div class="services-container">
+
+<h3 >Services</h3>
+
+<div class="service">
+    <h4>Event Photography</h4> <!--باقي الصوره -->
+</div>
+
+<div class="service">
+    <h4>Portrait Photography </h4> <!--باقي الصوره -->
+</div>
+
+<div class="service">
+    <h4>Drone Photography & videography </h4> <!--باقي الصوره -->
+</div>
+
+<div class="service">
+    <h4>Product & Commercial Photography </h4> <!--باقي الصوره -->
+</div>
+
+
+</div>
+
+<div class ="buttons-area">
+
+<div class="add-a-new-service-link">
+<a href=""> Add a new Service </a>
+
+</div>
+
+<div class="manage-staff-member-link">
+<a href=""> Manage staff members </a>
+
+</div>
+
+</div>
+
+
+
+</main>
+
+<footer> @ copy right </footer> <!-- جزء سندس-->
+    </body>
+</html>
