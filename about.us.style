@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* الموظفين */
+  .team {
+    display: flex;
+  overflow: auto;       
+  white-space: nowrap;
+  gap: 20px;
+  padding: 20px;
+  width: 80%;             
+  margin: 0 auto;         
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  }
+  
+  .team div {
+    border: 1px solid#ccc;
+    padding: 30px;
+    text-align: center;
+    width: 190px;
+    font-weight: bold;
+  }
+  
+  .team img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* النموذج */
+  form {
+    border: 1px solid #ccc;
+    width: 84%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  /* كل صف فيه عمودين */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* مسافة بين العمودين */
+    margin-bottom: 15px;
+  }
+  
+  /* كل عمود داخل الصف */
+  .row div {
+    flex: 1;
+  }
+  
+  /*  ليبل*/
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* كل الخانات بنفس الشكل */
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+  }
+  
+  /* الزر في النص */
+  button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+   
+  }
+  
+textarea { width: 100%;}
