@@ -5,7 +5,7 @@ html,body{
 main{
     height:100%;/* نفس الكومنت فوق للبودي*/
 }
-.orders-container , .services-container {
+.orders-container , .services-container { /* for customer dashboard and provider dashboard */
      width: 95%;               /* عرض الكونتينر كله */
      height: 80%;          /*  ارتفاع الكونتينر*/
   border: 3px solid black;    /* الإطار */
@@ -26,7 +26,7 @@ main{
   margin-bottom: 15px;
 }
 
-.service{
+.service{  /*   part of provider dashboard*/
    border: 1px solid #bbb;
   border-radius: 8px;
   padding: 40px;
@@ -35,7 +35,7 @@ main{
 
 
 
-.buttons-area{
+.buttons-area{ /*both dashboard and customer dashboard*/
     display:flex;
     justify-content: space-between;
     margin:20px auto auto auto ;
@@ -43,7 +43,7 @@ main{
     height:30%;
 }
 
-.request-service-link,
+.request-service-link, /*  for both dashboard and customer*/
 .service-evaluation-link,
 .add-a-new-service-link ,
 .manage-staff-member-link{
@@ -60,11 +60,272 @@ main{
 h3{
     text-align: center; font-size: 25px;
 }
-.service-name{
+.service-name{  /*for customer dashboard */
    text-align: center; 
 }
-.status{
+.status{ /*for customer dashboard */
     text-align: center;
 }
 
-h4{text-align: center; font-size: 1.5em;}
+h4{  /*for customer dashboard */
+    text-align: center; font-size: 1.5em;
+}
+
+
+/* صندوق العنوان فوق */
+.Request-for-Service p{
+  width: 95%;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto 20px auto;
+}
+/* ===== الحاوية العامة للفورم ===== */
+.Request-service-form{
+  width: 95%;
+  height:70%;
+  margin: 20px auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 32px;                 /* يبعد المحتوى عن الحواف */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;               /* يفعّل الراب */
+  justify-content: space-between;/* عمود يسار + عمود يمين */
+  align-items: flex-start;
+}
+
+/* ===== صفوف الأعمدة (موحّدة) ===== */
+/* نفس الخصائص للثلاثة لضمان سلوك ومسافات متطابقة */
+/* ===== Service (يسار) ===== */
+.service-inRequstService{
+  display: flex;               /* ليبل + حقل على سطر واحد */
+  align-items: center;         /* يوسّطهم عموديًا */
+  justify-content: flex-start; /* محاذاة من اليسار */
+  flex: 1 1 47%;               /* ياخذ تقريبًا نصف العرض وينزل عند الضيق */
+  order: 1;                    /* أول عنصر */
+  margin-bottom: 20px;         /* مسافة أسفل */
+}
+
+/* ===== Due date (يمين) ===== */
+.date{
+  display: flex;               /* نفس تنسيق Service */
+  align-items: center;
+  justify-content: flex-start; /* نفس المحاذاة حتى تتساوى المسافات */
+  flex: 1 1 47%;               /* نفس العرض تقريبًا */
+  order: 2;                    /* العنصر الثاني */
+  margin-bottom: 20px;         /* مسافة أسفل */
+  padding-right: 10px;         /* دفّة خفيفة للداخل */
+}
+
+/* ===== Name (صف ثاني يسار) ===== */
+.name{
+  display: flex;               /* ليبل + حقل */
+  align-items: center;
+  justify-content: flex-start; /* يبدأ من اليسار */
+  flex: 1 1 47%;               /* نفس الأسلوب المرن */
+  order: 3;                    /* ترتيب ثالث */
+  margin-bottom: 20px;
+}
+
+/* ===== الوصف بعرض كامل ===== */
+.description{
+  display: flex;
+  flex-direction: column;        /* الليبل فوق التكست */
+  flex: 1 1 100%;                /* ياخذ العرض كامل */
+  order: 4;
+  margin-top: 8px;
+}
+
+/* ===== الليبلات (مسافة موحّدة) ===== */
+.Request-service-form label{
+  font-weight: 700;
+  min-width: 120px;              /* محاذاة ثابتة لأطوال الليبل */
+  white-space: nowrap;           /* يمنع نزول السطر */
+  margin-right: 10px;            /* نفس المسافة قبل الحقل لكل الصفوف */
+}
+
+/* ===== الحقول (موحّدة) ===== */
+.Request-service-form select,
+.Request-service-form input[type="text"],
+.Request-service-form input[type="datetime-local"]{
+  width: 220px;                  /* نفس المقاس للجميع */
+  padding: 8px 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* ===== مربع الوصف ===== */
+.description label{ margin-bottom: 10px; }
+.Request-service-form textarea{
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1.5px solid #9e9e9e;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* ===== الزر ===== */
+.Request-service-form  input[type="submit"]{
+  order: 5;
+  align-self: center;            /* تمركز أفقي */
+  margin-top: 12px;
+  padding: 10px 24px;
+  border: 1px solid #9e9e9e;
+  background: #eee;
+  border-radius: 10px;
+  font-weight: 600;
+  
+}
+
+
+
+
+
+.image-evaluation {
+  display: block;           /* يجعل العنصر كتلي */
+  width: 95%;               /* نفس عرض الفورم */
+  height: 180px;            /* ارتفاع مناسب للصورة */
+  margin: 16px auto 10px;   /* توسيط ومسافة تحت */
+  border-radius: 12px;      /* زوايا ناعمة */
+  border: 0;                /* بدون حدود */
+  background: #d9d9d9;      /* لون رمادي لو ما اشتغلت الصورة */
+}
+
+
+.Service-Evaluation-form {
+  width: 95%;               
+  height: 70%;              
+  margin: 10px auto 20px;   
+  border: 2px solid #000;   
+  border-radius: 10px;      
+  padding: 32px;            
+  box-sizing: border-box;   
+
+  display: flex;            
+  flex-wrap: wrap;          
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+.service-inEvaluationService {
+  display: flex;            
+  align-items: center;      
+  justify-content: flex-start;
+  flex: 1 1 47%;            
+  order: 1;                 
+  margin-bottom: 20px;      
+}
+
+
+.Service-Evaluation-form label {
+  font-weight: 700;         
+  min-width: 120px;         
+  white-space: nowrap;      
+  margin-right: 10px;       
+}
+
+
+
+.Service-Evaluation-form select {
+  width: 220px;             
+  padding: 8px 10px;        
+  border: 1px solid #000;   
+  border-radius: 4px;       
+  box-sizing: border-box;   
+  background: #fff;         
+  font-size: 14px;          
+}
+
+
+.feedback {
+  display: flex;            
+  flex-direction: column;   
+  flex: 1 1 100%;           
+  order: 3;                 
+  margin-top: 8px;          
+}
+
+
+.feedback label {
+  margin-bottom: 10px;      
+}
+
+
+.feedback textarea {
+  width: 100%;              
+  min-height: 150px;        
+  padding: 10px;            
+  border: 1.5px solid #9e9e9e;
+  border-radius: 4px;       
+  box-sizing: border-box;   
+}
+
+
+.Service-Evaluation-form input[type="submit"] {
+  order: 4;                 
+  align-self: center;       
+  margin-top: 12px;         
+  padding: 10px 24px;       
+  border: 1px solid #9e9e9e;
+  background: #eee;         
+  border-radius: 10px;      
+  font-weight: 600;         
+  cursor: pointer;          
+}
+
+
+
+/* ⭐ النجوم (تحت الـService - في اليسار) */
+.stars-rating {
+  display: flex;               /* ترتيب أفقي */
+  align-items: center;         /* توسيط عمودي */
+  justify-content: flex-start; /* تبدأ من اليسار مثل Service */
+  flex: 1 1 47%;               /* نفس عرض عمود service */
+  order: 2;                    /* بعد service مباشرة */
+  margin-bottom: 20px;         /* مسافة بسيطة تحتها */
+}
+
+/* عنوان Rating قبل النجوم */
+.stars-rating::before {
+  content: "Rating:";          /* نص العنوان */
+  font-weight: 700;            /* خط غامق */
+  min-width: 120px;            /* نفس عرض ليبل service */
+  white-space: nowrap;         /* ما ينزل السطر */
+  margin-right: 8px;           /* مسافة صغيرة قبل أول نجمة */
+  font-size: 14px;             /* نفس حجم الخط */
+}
+
+/* نخفي أزرار الراديو */
+.stars-rating input[type="radio"] {
+  display: none;
+}
+
+/* شكل النجوم */
+.stars-rating label {
+  display: inline-block;       /* تخلي النجوم بجانب بعض */
+  font-size: 24px;             /* حجم النجمة */
+  color: #ccc;                 /* اللون الرمادي الافتراضي */
+  cursor: pointer;             /* شكل اليد */
+  margin: 0;                   /* بدون فراغات بين النجوم */
+  padding: 0;                  /* بدون حشوة */
+  transition: color 0.2s;      /* تأثير ناعم عند التلوين */
+}
+
+/* لما تمر الفأرة فوق نجمة أو قبلها */
+.stars-rating label:hover,
+.stars-rating label:hover ~ label {
+  color: gold;                 /* تصير ذهبية */
+}
+
+/* لما تختار نجمة فعليًا */
+.stars-rating input:checked ~ label {
+  color: gold;                 /* النجوم المختارة تظل ذهبية */
+}
