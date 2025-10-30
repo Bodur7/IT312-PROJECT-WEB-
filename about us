@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style1.css">
+  <title>About us</title>
+</head>
+<body>
+
+  <h1 style="text-align: left;">About us</h1>
+
+  <!-- من نحن -->
+  <h2>Who we are</h2>
+  <div class="team">
+    <div>
+      <img src="n1.jpg" alt="Member 1">
+      <p><a href="" >sara ahmad</a></p>
+    </div>
+    <div>
+      <img src="n2.jpg" alt="Member 2">
+      <p>mohammed nasser</p>
+    </div>
+    <div>
+      <img src="n3.jpg" alt="Member 3">
+      <p>tala saad</p>
+    </div>
+    <div>
+      <img src="n4.jpg" alt="Member 4">
+      <p>najd saleem</p>
+    </div>
+    <div>
+      <img src="n5.jpg" alt="Member 5">
+      <p>saud ahmed</p>
+    </div>
+    <div>
+      <img src="n6.jpg" alt="Member 6">
+      <p>farah suliman</p>
+    </div>
+  </div>
+
+  
+
+
+  <form>
+    <h2>Join our team!</h2>
+  
+    <div class="row">
+      <div>
+        <label>Name:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Photo:</label>
+        <input type="file">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label>Date of birth:</label>
+        <input type="date">
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label>Area of expertise:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Skills:</label>
+        <input type="text">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label>Education:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Message:</label>
+        <textarea cols="4" rows="4" >write any thing !</textarea>
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+    
+
+
+
+</body>
+</html>
