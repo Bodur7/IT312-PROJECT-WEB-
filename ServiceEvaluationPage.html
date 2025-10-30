@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Service Evaluation page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+<p> lenzah </p> <!-- جزء سندس-->
+</header>
+
+
+<main>
+
+
+ <img class="image-evaluation" src="evaluation.jpg" alt="">
+
+    <form class="Service-Evaluation-form" action="ServiceEvaluationPage.html" method="get">
+<div class="service-inEvaluationService" >  
+    <label for="service"> Service:</label> 
+    <select id="service" name=" service">
+        <option value="Event Photography">Event Photography</option>
+         <option value="Portrait Photography">Portrait Photography</option>
+         <option value="Drone Photography & videography">Drone Photography & videography</option>
+         <option value="Product & Commercial Photography">Product & Commercial Photography </option>
+         <option value="Corporate & Headshot Photography">Corporate & Headshot Photography</option>
+        <option value="Photography Courses & Workshops">Photography Courses & Workshops</option>
+
+    </select>
+
+    </div>
+
+
+        <div class="stars-rating">
+  <!-- ملاحظة: الترتيب بالعكس عشان تأثير الـ ~ يشتغل من اليسار لليمين -->
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5" title="5 stars">★</label>
+
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4" title="4 stars">★</label>
+
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3" title="3 stars">★</label>
+
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2" title="2 stars">★</label>
+
+  <input type="radio" id="star1" name="rating" value="1" required />
+  <label for="star1" title="1 star">★</label>
+</div>
+
+
+<div class="feedback">
+        <label>feedback</label>
+        <textarea name="feedback" rows="5" cols="50"> input here</textarea>
+    </div>
+
+<input type="submit" value="submit">
+
+</form>
+</main>
+
+
+
+
+<footer>
+<p> copyright</p><!-- جزء سندس -->
+</footer>
+
+</body>
+
+
+
+
+</html>
