@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Request for Service</title>
+</head>
+<body>
+
+    <header>
+        <p> lenzah </p> <!-- جزء سندس-->
+    </header>
+
+<main>
+    <div class="Request-for-Service">
+         <h1> Request for Service</h1>
+        <p>
+             Need a service? You’re in the right place.
+Select your desired service from the menu, choose the date that works best for you,
+ and provide a short description of what you need. This helps us ensure your request is 
+ handled quickly and efficiently.</p>
+    </div>
+
+
+
+<form class="Request-service-form" action="RequestForService.html" method="get">
+
+    
+<div class="service-inRequstService" >  
+    <label for="service"> Service:</label> 
+    <select id="service" name=" service">
+        <option value="Event Photography">Event Photography</option>
+         <option value="Portrait Photography">Portrait Photography</option>
+         <option value="Drone Photography & videography">Drone Photography & videography</option>
+         <option value="Product & Commercial Photography">Product & Commercial Photography </option>
+         <option value="Corporate & Headshot Photography">Corporate & Headshot Photography</option>
+        <option value="Photography Courses & Workshops">Photography Courses & Workshops</option>
+
+    </select>
+
+    </div>
+
+    <div class="name">
+        <label for="name"> Name:</label>
+        <input type="text"  id="name"  name="name"  placeholder="input text"  value ="Unknown">
+    </div>
+
+
+    <div class="date">
+        <label for="date"> Due date:</label>
+        <input type="datetime-local" id="date" name="date" value="2024-08-21">
+    </div>
+
+
+    <div class="description">
+        <label> Request Description</label>
+        <textarea name="entry" rows="7" cols="70"> input here</textarea>
+    </div>
+
+<input type="submit" value="submit">
+
+</form>
+
+    
+
+</main>
+
+<footer>
+    <p> copyright</p><!-- جزء سندس -->
+</footer>
+
+
+</body>
+
+</html>
