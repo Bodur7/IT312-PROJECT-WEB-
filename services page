@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+  <title>Services</title>
+  <link rel="stylesheet" href="styyle.css">
+</head>
+
+<body>
+
+<header> Lenzah </header> <!-- جزء سندس -->
+
+
+<div class="header-services">
+
+  <h2>Services</h2>
+
+  <div class="sort-area">
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <optgroup label="Price">
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </optgroup>
+      <optgroup label="Name">
+        <option value="A-Z">Name: A-Z</option>
+        <option value="Z-A">Name: Z-A</option>
+      </optgroup>
+    </select>
+  </div>
+</div>
+
+
+<div class="services-container">
+
+  <div class="service-box">
+    <h3>Event Photography</h3>
+    <img src="1.png.jpg" alt="Event Photography">
+    <p>Capture the energy and emotions of weddings, parties, and corporate events with elegant, high-resolution photos that beautifully tell your story</p>
+    <p class="price">Price : from 800 per session</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Portrait Photography</h3>
+    <img src="6.jpg" alt="Portrait Photography">
+    <p>captures every special moment — from weddings and corporate events to private celebrations. With a creative eye and professional equipment, we ensure your memories are preserved in stunning, high-quality images that tell the full story of your event.</p>
+    <p class="price">Price : from 500 per session</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Drone Photography & Videography</h3>
+    <img src="4.jpg" alt="Drone Photography">
+    <p>Experience breathtaking aerial shots that showcase your events, real estate, or landscapes from an entirely new perspective. Using professional drones and 4K cameras, we deliver cinematic-quality images and videos that elevate your vision and highlight every detail from above.</p>
+    <p class="price">Price : from 1200 per session</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Product & Commercial Photography</h3>
+    <img src="2.jpg" alt="Product Photography">
+    <p>Showcase your products with stunning visuals that highlight every detail. We create clean, high-quality images perfect for online stores, advertisements, and branding. From lighting to composition, every shot is crafted to make your product stand out and attract customers</p>
+    <p class="price">Price : from 1900 per session</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Corporate & Headshot Photography</h3>
+    <img src="3.jpg" alt="Corporate Photography">
+    <p>Present your best professional image with our headshot photography service. Perfect for LinkedIn profiles, company websites, and business branding — we use expert lighting and composition to highlight confidence, approachability, and professionalism in every portrait.</p>
+    <p class="price">Price : from 700 per session</p>
+  </div>
+
+  <div class="service-box">
+    <h3>Photography Courses & Workshops</h3>
+    <img src="5.jpg" alt="Photography Course">
+    <p>Learn the art of photography through our interactive courses and workshops. Whether you’re a beginner or looking to refine your skills, we cover everything from camera basics and lighting to composition and editing. Each session is hands-on,inspiring and designed to help you master your creative vision.</p>
+    <p class="price">Price : from 1200 per session</p>
+  </div>
+
+</div>
+
+<footer>@ copy right</footer> <!-- جزء سندس -->
+
+</body>
+</html>
