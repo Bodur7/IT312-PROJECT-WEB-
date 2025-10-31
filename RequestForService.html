@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--to declare the file is html -->
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Request for Service</title>
+    <title>Request for Service</title> <!--title of the page -->
+    <link rel="stylesheet" href="style.css"> <!--to link with css -->
 </head>
 <body>
 
@@ -11,22 +11,22 @@
     </header>
 
 <main>
-    <div class="Request-for-Service">
+    <div class="Request-for-Service">  <!--div as container for request of service -->
          <h1> Request for Service</h1>
         <p>
-             Need a service? You’re in the right place.
-Select your desired service from the menu, choose the date that works best for you,
- and provide a short description of what you need. This helps us ensure your request is 
- handled quickly and efficiently.</p>
+             Need a service? You’re in the right place.Select your desired service from the menu,
+              choose the date that works best for you,and provide a short description of what you need.
+              This helps us ensure your request is handled quickly and efficiently.</p>
+ 
     </div>
 
 
 
-<form class="Request-service-form" action="RequestForService.html" method="get">
+<form class="Request-service-form" action="RequestForService.html" method="get">  <!-- form for requesting for service -->
 
     
-<div class="service-inRequstService" >  
-    <label for="service"> Service:</label> 
+<div class="service-inRequstService" >   <!--div  for the drop down menu -->
+    <label for="service"> Service:</label> <!--label for the user to know this is service to choose -->
     <select id="service" name=" service">
         <option value="Event Photography">Event Photography</option>
          <option value="Portrait Photography">Portrait Photography</option>
@@ -39,24 +39,24 @@ Select your desired service from the menu, choose the date that works best for y
 
     </div>
 
-    <div class="name">
+    <div class="name"> <!--div for the name field  -->
         <label for="name"> Name:</label>
         <input type="text"  id="name"  name="name"  placeholder="input text"  value ="Unknown">
     </div>
 
 
-    <div class="date">
+    <div class="date"> <!--div for date field -->
         <label for="date"> Due date:</label>
         <input type="datetime-local" id="date" name="date" value="2024-08-21">
     </div>
 
-
-    <div class="description">
+ 
+    <div class="description"> <!--div for description -->
         <label> Request Description</label>
         <textarea name="entry" rows="7" cols="70"> input here</textarea>
     </div>
 
-<input type="submit" value="submit">
+<input type="submit" value="submit"> <!--submitting button -->
 
 </form>
 
