@@ -5,327 +5,409 @@ html,body{
 main{
     height:100%;/* نفس الكومنت فوق للبودي*/
 }
-.orders-container , .services-container { /* for customer dashboard and provider dashboard */
-     width: 95%;               /* عرض الكونتينر كله */
-     height: 80%;          /*  ارتفاع الكونتينر*/
-  border: 3px solid black;    /* الإطار */
-  border-radius: 10px;        /* زوايا دائرية */
-  background-color: white;    /* خلفية بيضاء */
-  padding: 20px;                 /* مسافة للترتيب بين الكونتينر والاوردر*/
-  box-sizing: border-box;
-  overflow: auto ;               /*للسكرول*/
-  margin : auto;                /* عشان الكونتينر يتوسط بالنص*/
+
+
+/* -------------------------------------------------------- Customer dashboard styling------------------------------------------------------*/ 
+
+
+
+.orders-container { /* For customer dashboard */
+  width: 95%;               /* Sets the container width */
+  height: 80%;              /* Sets the container height */
+  border: 3px solid black;  /* Adds a black border */
+  border-radius: 10px;      /* Rounds the corners */
+  background-color: white;  /* White background color */
+  padding: 20px;            /* Space between content and the border */
+  box-sizing: border-box;   /* Includes padding and border in total size */
+  overflow: auto;           /* Enables scroll if content overflows */
+  margin: auto;             /* Centers the container horizontally */
 }
 
 
 
-.order{
-   border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 15px;
-}
 
-.service{  /*   part of provider dashboard*/
-   border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 40px;
-  margin-bottom: 15px;
+.order {
+  border: 1px solid #bbb;     /* Adds a light gray border around each order */
+  border-radius: 8px;         /* Rounds the corners of the box */
+  padding: 10px;              /* Space between the content and the border */
+  margin-bottom: 15px;        /* Space below each order box */
 }
 
 
-
-.buttons-area{ /*both dashboard and customer dashboard*/
-    display:flex;
-    justify-content: space-between;
-    margin:20px auto auto auto ;
-    width:95%;
-    height:30%;
-}
-
-.request-service-link, /*  for both dashboard and customer*/
-.service-evaluation-link,
-.add-a-new-service-link ,
-.manage-staff-member-link{
-  border: 2px solid black;
-  border-radius: 10px;
-  width: 36%;
-  height: 30%;
-  display: flex;
-  justify-content: center;  /* يوسّط أفقي */
-  align-items: center;      /* يوسّط عمودي */
-  
-}
-
-h3{
-    text-align: center; font-size: 25px;
-}
-.service-name{  /*for customer dashboard */
-   text-align: center; 
-}
-.status{ /*for customer dashboard */
-    text-align: center;
-}
-
-h4{  /*for customer dashboard */
-    text-align: center; font-size: 1.5em;
+.service {  /* Part of provider dashboard */
+  border: 1px solid #bbb;     /* Adds a light gray border around each service box */
+  border-radius: 8px;         /* Rounds the corners for a softer look */
+  padding: 40px;              /* Inner space between the content and the border */
+  margin-bottom: 15px;        /* Space below each service box */
 }
 
 
-/* صندوق العنوان فوق */
-.Request-for-Service p{
-  width: 95%;
-  border: 2px solid #000;
-  border-radius: 10px;
-  background: #fff;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto 20px auto;
-}
-/* ===== الحاوية العامة للفورم ===== */
-.Request-service-form{
-  width: 95%;
-  height:70%;
-  margin: 20px auto;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 32px;                 /* يبعد المحتوى عن الحواف */
-  box-sizing: border-box;
 
-  display: flex;
-  flex-wrap: wrap;               /* يفعّل الراب */
-  justify-content: space-between;/* عمود يسار + عمود يمين */
-  align-items: flex-start;
+
+.buttons-area {  /* Used in both provider and customer dashboards */
+  display: flex;                     /* Enables Flexbox layout for easy alignment */
+  justify-content: space-between;    /* Distributes buttons evenly with space in between */
+  margin: 20px auto auto auto;       /* Adds top margin and centers horizontally */
+  width: 95%;                        /* Sets the container width */
+  height: 30%;                       /* Sets the container height */
 }
 
-/* ===== صفوف الأعمدة (موحّدة) ===== */
-/* نفس الخصائص للثلاثة لضمان سلوك ومسافات متطابقة */
-/* ===== Service (يسار) ===== */
-.service-inRequstService{
-  display: flex;               /* ليبل + حقل على سطر واحد */
-  align-items: center;         /* يوسّطهم عموديًا */
-  justify-content: flex-start; /* محاذاة من اليسار */
-  flex: 1 1 47%;               /* ياخذ تقريبًا نصف العرض وينزل عند الضيق */
-  order: 1;                    /* أول عنصر */
-  margin-bottom: 20px;         /* مسافة أسفل */
+
+.request-service-link,  /* Used in  customer dashboards */
+.service-evaluation-link {
+  border: 2px solid black;     /* Adds a solid black border around both boxes */
+  border-radius: 10px;         /* Rounds the corners for a smoother look */
+  width: 36%;                  /* Sets each box width relative to its parent */
+  height: 30%;                 /* Sets each box height relative to its parent */
+  display: flex;               /* Enables Flexbox layout inside each box */
+  justify-content: center;     /* Centers content horizontally (main axis) */
+  align-items: center;         /* Centers content vertically (cross axis) */
 }
 
-/* ===== Due date (يمين) ===== */
-.date{
-  display: flex;               /* نفس تنسيق Service */
-  align-items: center;
-  justify-content: flex-start; /* نفس المحاذاة حتى تتساوى المسافات */
-  flex: 1 1 47%;               /* نفس العرض تقريبًا */
-  order: 2;                    /* العنصر الثاني */
-  margin-bottom: 20px;         /* مسافة أسفل */
-  padding-right: 10px;         /* دفّة خفيفة للداخل */
+.orders-container h3 {
+  text-align: center;     /* Centers the heading text horizontally */
+  font-size: 25px;        /* Sets a fixed font size for the heading */
 }
 
-/* ===== Name (صف ثاني يسار) ===== */
-.name{
-  display: flex;               /* ليبل + حقل */
-  align-items: center;
-  justify-content: flex-start; /* يبدأ من اليسار */
-  flex: 1 1 47%;               /* نفس الأسلوب المرن */
-  order: 3;                    /* ترتيب ثالث */
-  margin-bottom: 20px;
+.service-name {  /* For customer dashboard */
+  text-align: center;     /* Centers the service name text */
 }
 
-/* ===== الوصف بعرض كامل ===== */
-.description{
-  display: flex;
-  flex-direction: column;        /* الليبل فوق التكست */
-  flex: 1 1 100%;                /* ياخذ العرض كامل */
-  order: 4;
-  margin-top: 8px;
+.status {  /* For customer dashboard */
+  text-align: center;     /* Centers the service status text */
 }
 
-/* ===== الليبلات (مسافة موحّدة) ===== */
-.Request-service-form label{
-  font-weight: 700;
-  min-width: 120px;              /* محاذاة ثابتة لأطوال الليبل */
-  white-space: nowrap;           /* يمنع نزول السطر */
-  margin-right: 10px;            /* نفس المسافة قبل الحقل لكل الصفوف */
+.service-name h4 {  /* For customer dashboard */
+  text-align: center;     /* Centers the subheading text */
+  font-size: 16px;     /* Sets the font size */
 }
 
-/* ===== الحقول (موحّدة) ===== */
+
+
+/* --------------------------------------------------------Requst for service styling------------------------------------------------------*/ 
+
+
+
+/* Title box at the top */
+.Request-for-Service p {
+  width: 95%;                 /* Sets the width of the box relative to its parent */
+  border: 2px solid #000;     /* Adds a solid black border around the box */
+  border-radius: 10px;        /* Rounds the corners for a smoother look */
+  background: #fff;           /* Sets a white background color */
+  padding: 20px;              /* Adds inner space between content and border */
+  box-sizing: border-box;     /* Includes padding and border in total element size */
+  margin: 0 auto 20px auto;   /* Centers the box horizontally and adds bottom space */
+}
+
+/* ===== Main container for the form ===== */
+.Request-service-form {
+  width: 95%;                     /* Sets the overall form width relative to its parent */
+  height: 70%;                    /* Sets the form height relative to its parent */
+  margin: 20px auto;              /* Adds vertical spacing and centers horizontally */
+  border: 2px solid #000;         /* Adds a solid black border around the form */
+  border-radius: 10px;            /* Rounds the corners for a smoother look */
+  padding: 32px;                  /* Adds inner spacing between content and border */
+  box-sizing: border-box;         /* Includes padding and border in total size */
+
+  display: flex;                  /* Enables Flexbox layout for form content */
+  flex-wrap: wrap;                /* Allows items to wrap onto multiple lines */
+  justify-content: space-between; /* Distributes items: left column + right column */
+  align-items: flex-start;        /* Aligns items to the top of the container */
+}
+
+
+
+/* ===== Service (left column) ===== */
+.service-inRequstService {
+  display: flex;                /* Places the label and input field on the same row */
+  align-items: center;          /* Vertically centers label and input */
+  justify-content: flex-start;  /* Aligns content to the left */
+  flex: 1 1 47%;                /* Takes roughly half the form width and wraps on smaller screens */
+  order: 1;                     /* Defines the display order (first element) */
+  margin-bottom: 20px;          /* Adds spacing below each row */
+}
+
+
+/* ===== Due date (right column) ===== */
+.date {
+  display: flex;                /* Same flex layout as the Service section */
+  align-items: center;          /* Vertically centers the label and input field */
+  justify-content: flex-start;  /* Keeps the same alignment for consistent spacing */
+  flex: 1 1 47%;                /* Takes about half the width and wraps if needed */
+  order: 2;                     /* Displays as the second item in order */
+  margin-bottom: 20px;          /* Adds spacing below the row */
+  padding-right: 10px;          /* Adds slight inner space on the right side */
+}
+
+
+/* ===== Name (second row - left column) ===== */
+.name {
+  display: flex;                /* Places the label and input field on the same line */
+  align-items: center;          /* Vertically centers label and input */
+  justify-content: flex-start;  /* Aligns the content from the left side */
+  flex: 1 1 47%;                /* Uses flexible sizing (about half width, wraps on small screens) */
+  order: 3;                     /* Displays as the third item in order */
+  margin-bottom: 20px;          /* Adds spacing below the row */
+}
+
+
+/* ===== Description (full-width row) ===== */
+.description {
+  display: flex;                 /* Enables Flexbox layout */
+  flex-direction: column;        /* Stacks label above the textarea/input */
+  flex: 1 1 100%;                /* Takes the full width of the container */
+  order: 4;                      /* Appears as the fourth item in order */
+  margin-top: 8px;               /* Adds a small top spacing */
+}
+
+/* ===== Labels (consistent spacing) ===== */
+.Request-service-form label {
+  font-weight: 700;              /* Makes label text bold for better readability */
+  min-width: 120px;              /* Sets a fixed minimum width for alignment consistency */
+  white-space: nowrap;           /* Prevents text from wrapping to the next line */
+  margin-right: 10px;            /* Adds equal spacing between label and input field */
+}
+
+
+/* ===== Form fields (unified style) ===== */
 .Request-service-form select,
 .Request-service-form input[type="text"],
-.Request-service-form input[type="datetime-local"]{
-  width: 220px;                  /* نفس المقاس للجميع */
-  padding: 8px 10px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-/* ===== مربع الوصف ===== */
-.description label{ margin-bottom: 10px; }
-.Request-service-form textarea{
-  width: 100%;
-  min-height: 150px;
-  padding: 10px;
-  border: 1.5px solid #9e9e9e;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-/* ===== الزر ===== */
-.Request-service-form  input[type="submit"]{
-  order: 5;
-  align-self: center;            /* تمركز أفقي */
-  margin-top: 12px;
-  padding: 10px 24px;
-  border: 1px solid #9e9e9e;
-  background: #eee;
-  border-radius: 10px;
-  font-weight: 600;
-  
+.Request-service-form input[type="datetime-local"] {
+  width: 220px;                  /* Sets a consistent width for all fields */
+  padding: 8px 10px;             /* Adds inner space for better readability */
+  border: 1px solid #000;        /* Adds a solid black border around inputs */
+  border-radius: 4px;            /* Slightly rounds the corners for a softer look */
+  box-sizing: border-box;        /* Includes border and padding in the total element size */
 }
 
 
+/* ===== Description box ===== */
+.description label {
+  margin-bottom: 10px;            /* Adds space between the label and the textarea */
+}
+
+.Request-service-form textarea {
+  width: 100%;                    /* Makes the textarea span the full width of its container */
+  min-height: 150px;              /* Sets a minimum height for comfortable typing space */
+  padding: 10px;                  /* Adds inner space between text and border */
+  border: 1.5px solid #9e9e9e;    /* Adds a soft gray border for a clean look */
+  border-radius: 4px;             /* Rounds the corners slightly */
+  box-sizing: border-box;         /* Includes border and padding in total size */
+}
+
+
+/* ===== Submit button ===== */
+.Request-service-form input[type="submit"] {
+  order: 5;                      /* Fifth item in order */
+  align-self: center;            /* Centers vertically within the flex context if needed */
+  margin: 12px auto 0 auto;      /* Centers horizontally inside the form */
+  padding: 10px 24px;            /* Inner spacing for comfort */
+  border: 1px solid #9e9e9e;     /* Light gray border */
+  background: #eee;              /* Light gray background */
+  border-radius: 10px;           /* Rounded corners */
+  font-weight: 600;              /* Semi-bold text */
+}
+
+
+
+
+/* -------------------------------------------------------Evaluation of service styling------------------------------------------------------*/ 
 
 
 
 .image-evaluation {
-  display: block;           /* يجعل العنصر كتلي */
-  width: 95%;               /* نفس عرض الفورم */
-  height: 180px;            /* ارتفاع مناسب للصورة */
-  margin: 16px auto 10px;   /* توسيط ومسافة تحت */
-  border-radius: 12px;      /* زوايا ناعمة */
-  border: 0;                /* بدون حدود */
-  background: #d9d9d9;      /* لون رمادي لو ما اشتغلت الصورة */
+  display: block;             /* Makes the element a block-level element */
+  width: 95%;                 /* Matches the form’s width for visual alignment */
+  height: 180px;              /* Sets an appropriate image height */
+  margin: 16px auto 10px;     /* Centers the image and adds spacing below */
+  border-radius: 12px;        /* Rounds the corners for a soft appearance */
+ 
+  background: #d9d9d9;        /* Light gray fallback color if image fails to load */
 }
 
 
+/* ===== Service Evaluation form container ===== */
 .Service-Evaluation-form {
-  width: 95%;               
-  height: 70%;              
-  margin: 10px auto 20px;   
-  border: 2px solid #000;   
-  border-radius: 10px;      
-  padding: 32px;            
-  box-sizing: border-box;   
-
-  display: flex;            
-  flex-wrap: wrap;          
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 95%;                    /* Form width relative to parent */
+  height: 70%;                   /* Percentage height (requires parent with explicit height) */
+  margin: 10px auto 20px;        /* Top and bottom spacing; centers horizontally */
+  border: 2px solid #000;        /* Solid black border */
+  border-radius: 10px;           /* Rounded corners */
+  padding: 32px;                 /* Inner spacing for comfortable layout */
+  box-sizing: border-box;        /* Include border and padding in total size */
+  display: flex;                 /* Enable Flexbox layout */
+  flex-wrap: wrap;               /* Allow items to wrap to the next line */
+  justify-content: space-between;/* Distribute items (left column + right column) */
+  align-items: flex-start;       /* Align items to the top on the cross-axis */
 }
 
 
 
+/* ===== Service (inside Evaluation Service form) ===== */
 .service-inEvaluationService {
-  display: flex;            
-  align-items: center;      
-  justify-content: flex-start;
-  flex: 1 1 47%;            
-  order: 1;                 
-  margin-bottom: 20px;      
+  display: flex;                /* Places label and input on the same line */
+  align-items: center;          /* Vertically centers label and input */
+  justify-content: flex-start;  /* Aligns content to the left */
+  flex: 1 1 47%;                /* Takes about half the width and wraps on smaller screens */
+  order: 1;                     /* Defines this as the first element in the flex layout */
+  margin-bottom: 20px;          /* Adds spacing below the row */
 }
 
-
+/* ===== Labels (consistent spacing for Service Evaluation form) ===== */
 .Service-Evaluation-form label {
-  font-weight: 700;         
-  min-width: 120px;         
-  white-space: nowrap;      
-  margin-right: 10px;       
+  font-weight: 700;              /* Makes label text bold for better readability */
+  min-width: 120px;              /* Sets a fixed minimum width to align all labels evenly */
+  margin-right: 10px;            /* Adds uniform space between label and input field */
 }
 
 
 
+
+/* ===== Dropdown list (Service Evaluation form) ===== */
 .Service-Evaluation-form select {
-  width: 220px;             
-  padding: 8px 10px;        
-  border: 1px solid #000;   
-  border-radius: 4px;       
-  box-sizing: border-box;   
-  background: #fff;         
-  font-size: 14px;          
+  width: 220px;               /* Sets a fixed width for consistency */
+  padding: 8px 10px;          /* Adds inner space for comfortable text spacing */
+  border: 1px solid #000;     /* Adds a solid black border */
+  border-radius: 4px;         /* Rounds corners slightly for a smoother look */
+  box-sizing: border-box;     /* Includes border and padding in total width */
+  background: #fff;           /* White background for clarity */
+  font-size: 14px;            /* Sets readable and consistent text size */
 }
 
 
+/* ===== Feedback section (full-width column) ===== */
 .feedback {
-  display: flex;            
-  flex-direction: column;   
-  flex: 1 1 100%;           
-  order: 3;                 
-  margin-top: 8px;          
+  display: flex;                /* Enables Flexbox layout for inner elements */
+  flex-direction: column;       /* Stacks label above the input/textarea */
+  flex: 1 1 100%;               /* Takes the full width of the form */
+  order: 3;                     /* Appears as the third item in the flex order */
+  margin-top: 8px;              /* Adds small spacing above the section */
 }
 
 
+
+/* ===== Feedback label ===== */
 .feedback label {
-  margin-bottom: 10px;      
+  margin-bottom: 10px;          /* Adds space between the label and textarea */
 }
 
-
+/* ===== Feedback textarea ===== */
 .feedback textarea {
-  width: 100%;              
-  min-height: 150px;        
-  padding: 10px;            
-  border: 1.5px solid #9e9e9e;
-  border-radius: 4px;       
-  box-sizing: border-box;   
+  width: 100%;                  /* Makes the textarea span the full width of its container */
+  min-height: 150px;            /* Ensures enough height for comfortable typing */
+  padding: 10px;                /* Adds inner spacing between text and border */
+  border: 1.5px solid #9e9e9e;  /* Light gray border for a clean appearance */
+  border-radius: 4px;           /* Softens the corners visually */
+  box-sizing: border-box;       /* Includes padding and border in the total width */
 }
 
 
+
+/* ===== Submit button ( ===== */
 .Service-Evaluation-form input[type="submit"] {
-  order: 4;                 
-  align-self: center;       
-  margin-top: 12px;         
-  padding: 10px 24px;       
-  border: 1px solid #9e9e9e;
-  background: #eee;         
-  border-radius: 10px;      
-  font-weight: 600;         
-  cursor: pointer;          
+  order: 4;                      /* Fourth in flex order */
+  align-self: center;            /* Helps center vertically inside flex container */
+  margin: 12px auto 0 auto;      /* Centers horizontally inside the form */
+  padding: 10px 24px;            /* Inner spacing for comfort */
+  border: 1px solid #9e9e9e;     /* Light gray border */
+  background: #eee;              /* Light gray background */
+  border-radius: 10px;           /* Rounded corners */
+  font-weight: 600;              /* Semi-bold text */
+  cursor: pointer;               /* Pointer cursor on hover */
 }
 
-
-
-/* ⭐ النجوم (تحت الـService - في اليسار) */
+/* ===== ⭐ Stars rating (below Service - left side) ===== */
 .stars-rating {
-  display: flex;               /* ترتيب أفقي */
-  align-items: center;         /* توسيط عمودي */
-  justify-content: flex-start; /* تبدأ من اليسار مثل Service */
-  flex: 1 1 47%;               /* نفس عرض عمود service */
-  order: 2;                    /* بعد service مباشرة */
-  margin-bottom: 20px;         /* مسافة بسيطة تحتها */
+  display: flex;               /* Places the text and stars in a horizontal row (Lecture6 – Flexbox) */
+  align-items: center;         /* Vertically centers the rating label and stars (Lecture6 – Flexbox alignment) */
+  justify-content: flex-start; /* Aligns all content to the left (same as Service field) */
+  flex: 1 1 47%;               /* Takes about half the form width (Lecture6 – Flex sizing) */
+  order: 2;                    /* Appears after the Service field (Lecture6 – order property) */
+  margin-bottom: 20px;         /* Adds space below the rating section (Lecture6 – Box model margin) */
+  gap: 8px;                    /* Adds space between the "Rating:" label and the stars (Lecture6 – Flex gap) */
 }
 
-/* عنوان Rating قبل النجوم */
-.stars-rating::before {
-  content: "Rating:";          /* نص العنوان */
-  font-weight: 700;            /* خط غامق */
-  min-width: 120px;            /* نفس عرض ليبل service */
-  white-space: nowrap;         /* ما ينزل السطر */
-  margin-right: 8px;           /* مسافة صغيرة قبل أول نجمة */
-  font-size: 14px;             /* نفس حجم الخط */
+/* ===== Rating label text ===== */
+.rating-label {
+  font-weight: 700;            /* Makes the label text bold for readability (Lecture5 – font-weight) */
+  min-width: 120px;            /* Keeps label width consistent with Service label (Lecture6 – Box model width) */
+  font-size: 14px;             /* Matches font size used across form fields (Lecture5 – font-size) */
+  text-align: left;            /* Aligns the text to the left (Lecture5 – text-align) */
 }
 
-/* نخفي أزرار الراديو */
-.stars-rating input[type="radio"] {
-  display: none;
+/* ===== Stars container ===== */
+.stars-container {
+  display: flex;               /* Arranges all stars in a single horizontal line (Lecture6 – Flexbox) */
+  flex-direction: row-reverse; /* Reverses the order so that the first star is on the left visually (Lecture6 – flex-direction) */
+  align-items: center;         /* Vertically centers the stars within the container (Lecture6 – alignment) */
 }
 
-/* شكل النجوم */
-.stars-rating label {
-  display: inline-block;       /* تخلي النجوم بجانب بعض */
-  font-size: 24px;             /* حجم النجمة */
-  color: #ccc;                 /* اللون الرمادي الافتراضي */
-  cursor: pointer;             /* شكل اليد */
-  margin: 0;                   /* بدون فراغات بين النجوم */
-  padding: 0;                  /* بدون حشوة */
-  transition: color 0.2s;      /* تأثير ناعم عند التلوين */
+/* ===== Hide radio buttons ===== */
+.stars-container input[type="radio"] {
+  display: none;               /* Hides the radio buttons (Lecture7 – Form controls styling) */
 }
 
-/* لما تمر الفأرة فوق نجمة أو قبلها */
-.stars-rating label:hover,
-.stars-rating label:hover ~ label {
-  color: gold;                 /* تصير ذهبية */
+/* ===== Stars style ===== */
+.stars-container label {
+  display: inline-block;       /* Keeps stars next to each other horizontally (Lecture5 – display property) */
+  font-size: 24px;             /* Controls the size of each star (Lecture5 – font-size) */
+  color: #ccc;                 /* Default gray color for unselected stars (Lecture5 – color) */
+  cursor: pointer;             /* Changes cursor to a pointer on hover (Lecture7 – Form usability) */
+  margin: 0;                   /* Removes default margins (Lecture6 – Box model margin) */
+  padding: 0;                  /* Removes inner spacing (Lecture6 – Box model padding) */
+  margin-left: -4px;           /* Reduces spacing between stars for tighter alignment (Lecture6 – Box model fine-tuning) */
+  transition: color 0.2s ease; /* Smooth color transition when hovering (extra visual effect) */
 }
 
-/* لما تختار نجمة فعليًا */
-.stars-rating input:checked ~ label {
-  color: gold;                 /* النجوم المختارة تظل ذهبية */
+/* ===== Hover effect – highlight from left to right ===== */
+.stars-container label:hover,
+.stars-container label:hover ~ label {
+  color: gold;                 /* Changes hovered stars to gold (Lecture7 – :hover pseudo-class) */
 }
+
+/* ===== Checked effect – keep selected stars gold ===== */
+.stars-container input:checked ~ label {
+  color: #ccc;                 /* Resets all stars to gray before applying gold (Lecture7 – :checked) */
+}
+
+.stars-container input:checked + label,
+.stars-container input:checked + label ~ label {
+  color: gold;                 /* Highlights selected stars from left to right (Lecture7 – :checked + sibling selector) */
+}
+
+
+
+
+/* ------------------------------------------------------- Provider dashboard styling------------------------------------------------------*/ 
+
+ 
+
+
+ /* ===== Services container ===== */
+/* Used in both Customer and Provider Dashboards */
+.services-container {  
+  width: 95%;                /* Sets container width relative to the page (Lecture6 – Box model width) */
+  height: 80%;               /* Sets container height (Lecture6 – Box model height) */
+  border: 3px solid black;   /* Adds a solid border around the container (Lecture6 – border) */
+  border-radius: 10px;       /* Rounds the container corners (Lecture6 – border-radius) */
+  background-color: white;   /* Sets white background (Lecture5 – background-color) */
+  padding: 20px;             /* Adds inner spacing between content and border (Lecture6 – padding) */
+  box-sizing: border-box;    /* Includes border & padding inside total width/height (Lecture6 – box-sizing) */
+  overflow: auto;            /* Enables scrollbars when content overflows (Lecture6 – overflow) */
+  margin: auto;              /* Centers the container horizontally (Lecture6 – margin auto) */
+}
+
+/* ===== Dashboard links (buttons) ===== */
+/* Used in both dashboards for navigation options */
+.add-a-new-service-link,
+.manage-staff-member-link {
+  border: 2px solid black;   /* Defines visible border for the link box (Lecture6 – border) */
+  border-radius: 10px;       /* Gives rounded corners for visual consistency (Lecture6 – border-radius) */
+  width: 36%;                /* Sets box width relative to container (Lecture6 – width) */
+  height: 30%;               /* Sets box height (Lecture6 – height) */
+  display: flex;             /* Allows centering text using Flexbox (Lecture6 – Flexbox) */
+  justify-content: center;   /* Horizontally centers content (Lecture6 – justify-content) */
+  align-items: center;       /* Vertically centers content (Lecture6 – align-items) */
+}
+
+
