@@ -1,0 +1,151 @@
+ body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .first{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+.grid {
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: flex-start; 
+  gap: 25px;             
+  width: 875px;          
+  margin: 0 auto 25px;
+}
+
+
+
+*{box-sizing: border-box;}
+
+
+
+
+
+    .member {
+      position: relative;
+ background: #fff;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px;
+      width: 200px;
+    
+    }
+
+    .member input[type="checkbox"] {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  accent-color: black; 
+  cursor: pointer;
+}
+
+    .member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+
+    .member label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+     .member span{font-size: larger;}
+
+
+    .delete-btn {
+      padding: 10px 25px;
+      border: 1px solid #000;
+      border-radius: 20px;
+      background: #eee;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background: #ddd;
+    }
+
+
+  
+
+
+
+/*form style*/
+
+
+.second {
+    border: 1px solid #ccc;
+    width: 84%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  /* كل صف فيه عمودين */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* مسافة بين العمودين */
+    margin-bottom: 15px;
+  }
+  
+  /* كل عمود داخل الصف */
+  .row div {
+    flex: 1;
+  }
+  
+  /*  ليبل*/
+ .labelSecond {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* كل الخانات بنفس الشكل */
+  .formInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+  }
+  
+  /* الزر في النص */
+  button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+   
+  }
+  
+textarea { width: 100%;}
+
+
+.add { padding: 10px 25px;
+      border: 1px solid #000;
+      border-radius: 20px;
+      background: #eee;
+      font-weight: bold;
+      cursor: pointer;}
