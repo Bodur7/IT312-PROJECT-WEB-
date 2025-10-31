@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styyle.css">
+  <title>About us</title>
+</head>
+
+
+<body>
+
+  <h1 id="About">About us</h1>
+
+  
+  <h2 id="about2">Who we are</h2>
+  <div class="team">
+    <div>
+      <img src="n1.jpg" alt="Member 1">
+      <p><a  href="sara.html" >SARAH AHMAD</a></p>
+    </div>
+    <div>
+      <img src="n2.jpg" alt="Member 2">
+      <p><a  href="mohammed.html" >MOHAMMED NASSER</a></p>
+    </div>
+    <div>
+      <img src="n5.jpg" alt="Member 3">
+      <p><a  href="saudahmad.html" >SAUD AHMAD</a></p>
+    </div>
+    <div>
+      <img src="n3.jpg" alt="Member 4">
+      <p><a  href="saudahmad.html" >NAJD SALEEM </a></p>
+    </div>
+    <div>
+      <img src="n4.jpg" alt="Member 5">
+      <p><a  href="saudahmad.html" >JOUD FAISAL</a></p>
+    </div>
+    <div>
+      <img src="n6.jpg" alt="Member 6">
+      <p><a  href="saudahmad.html" >FARAH SULIMAN</a></p>
+    </div>
+  </div>
+
+  
+
+
+  <form action="aboutus.html" method="post" enctype="multipart/form-data" id="own">
+    <h2 id="join">Join our team!</h2>
+  
+    <div class="row">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="unknown" maxlength="20"  id="name" required>
+      </div>
+      <div>
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo" required>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label for="date">Date of birth:</label>
+        <input type="date" name="date" id="date"  required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="unknown" maxlength="20" id="email" required>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label for="area">Area of expertise:</label>
+        <input type="text" name="area" value="unknown" maxlength="50" id="area" required>
+      </div>
+      <div>
+        <label for="skill">Skills:</label>
+        <input type="text" name="skill" value="unknown" maxlength="50" id="skill" required>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <label for="edu">Education:</label>
+        <input type="text" name="edu" value="unknown" maxlength="50" id="edu" required>
+      </div>
+      <div>
+        <label for="text">Message:</label>
+        <textarea cols="4" rows="4" id="text" >write any thing !</textarea>
+      </div> 
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+    
+
+
+
+</body>
+</html>
