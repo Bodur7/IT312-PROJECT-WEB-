@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add a service</title>
+   <link rel="stylesheet" href="AddAserviceStyle.css">
+ 
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+  <!-- Section 1 -->
+  <section class="hero">
+    <h1>Add a service</h1>
+    <p>
+      Add new photography services to expand your company’s offerings and reach more clients!
+    </p>
+  </section>
+
+
+
+  <!-- Section 2: the form -->
+
+
+  <section class="panel">
+
+    <form action="Add a service.html" method="post" >
+      <div class="file-row">
+        <input type="file" name="photo" >
+      </div>
+
+
+
+<div class="form-row">
+  <div class="field">
+    <label for="serviceName">Name of the service</label>
+    <input id="serviceName" name="serviceName" type="text" placeholder="Input text" required>
+  </div>
+
+  <div class="field">
+    <label for="price">Price</label>
+    <input id="price" name="price" type="number" step="0.01" placeholder="Input text" required>
+  </div>
+</div>
+
+
+
+
+      <div class="description">
+        <label  class="section-title" style="text-align:left;">Service description</label>
+        <textarea id="desc" name="description" placeholder="Input text"></textarea>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </section>
+
+</body>
+</html>
