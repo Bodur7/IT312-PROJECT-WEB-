@@ -2,10 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="styyle.css">
+  <link rel="stylesheet" href="style.css">
   <title>Sara Profile</title>
 </head>
 <body>
+
+          <!-- Header -->
+  <header>
+    <div class="logo"><a href="HOMEPAGE.html" >Lenzah</a></div>
+    <nav>
+      <a href="ServicesPage.html">Services</a>
+      <a href="About-Us.html">About us</a>
+      <a href="CustomerDashboard.html">Customer dashboard</a>
+      <a href="Provider's_Dashboard.html">Provider dashboard</a>
+    </nav>
+    <a href="mailto:someone@example.com" class="contact-icon">Contact us</a>
+  </header>
+
+     <nav>
+
+    <ul class="breadcrumb">
+  <li><a href="HOMEPAGE.html">Home</a></li>
+  <li><a href="About-Us.html">About Us</a></li>
+  <li><a href="sara.html">sara</a></li>
+</ul>
+  </nav>
 
   <h2 class="table">Staff Member Profile</h2>
 
@@ -14,7 +35,7 @@
       <th>Photo </th>
           <td colspan="3">
            <div class="photo-box">
-          <img src="n1.jpg" alt="Staff Photo">
+          <img src="images/staff/n1.jpg" alt="Staff Photo">
         </div>
       </td>
     </tr>
@@ -92,12 +113,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
