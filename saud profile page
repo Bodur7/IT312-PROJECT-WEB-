@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styyle.css">
+  <title>saud Profile</title>
+</head>
+<body>
+
+  <h2 class="table">Staff Member Profile</h2>
+
+  <table>
+   
+    <tr>
+      <th >Photo</th>
+      
+      <td colspan="3" ><div class="photo-box"><img src="n5.jpg" alt="Staff Photo" ></div></td>
+    </tr>
+
+   
+    <tr>
+      <th >Name</th>
+      <td colspan="3" >saud ahmad</td>
+
+    </tr>
+
+    
+    <tr>
+      <th  >Date of Birth</th>
+      <td colspan="3" >13/10/1999</td>
+    </tr>
+
+    
+    <tr>
+      <th >Email</th>
+      <td colspan="3" >saud_ahmad_algamdi@gmail.com</td>
+    </tr>
+
+    
+    <tr>
+      <th rowspan="2" >Area of Expertise</th>
+      <td colspan="3" >Photo Editing and Retouching</td>
+      
+    </tr>
+    <tr>
+      <td colspan="3">Social Media Content Creation</td>
+    </tr> 
+
+    
+    <tr>
+      <th >Education</th>
+      <td colspan="3">
+        <ul class="list" >
+          <li>2011–2015:
+            <ul class="list" >
+              <li>Bachelor’s in graphic design</li>
+              </ul>
+          </li>
+          <li>2016–2018:
+            <ul class="list" >
+              <li>Diploma in Digital Photography</li>
+              <li>Certificate in Photo Editing and Retouching</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th >Skills</th>
+      <td colspan="3">
+        <ul class="list" >
+          <li>technical skill
+            <ul class="list" >
+              <li>Camera Operation and Maintenance</li>
+              <li>Creative Composition and Framing</li>
+              
+            </ul>
+          </li>
+          <li>personal skills
+            <ul class="list" >
+              <li>Creativity and Artistic Vision</li>
+              <li>Self-Motivation and Continuous Learning</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
