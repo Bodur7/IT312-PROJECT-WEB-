@@ -1,13 +1,14 @@
 <!DOCTYPE html> <!--to declare this file is html -->
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title> Service Evaluation page</title> <!--title of the page -->
     <link rel="stylesheet" href="style.css"> <!-- to link eith css-->
 </head>
 
 <body>
 <header>
-   <div class="logo"><a href="HOMEPAGE.html" >Lenzah</a></div>
+   <div class="logo"><a href="HOMEPAGE.html" style="color: #f0f1db;" >Lenzah</a></div>
     <nav>
       <a href="ServicesPage.html">Services</a>
       <a href="About-Us.html">About us</a>
@@ -29,12 +30,12 @@
 <main>
 
 
- <img class="image-evaluation" src="evaluation.jpg" alt=""> <!--img in this page of evaluation -->
+ <img class="image-evaluation" src="images/evaluation-img.jpg" alt="evaluation"> <!--img in this page of evaluation -->
 
     <form class="Service-Evaluation-form" action="ServiceEvaluationPage.html" method="get">  <!--form of evaluating a service -->
 <div class="service-inEvaluationService" >  <!--div  for the drop down menu of choosing the service-->
     <label for="service"> Service:</label> 
-    <select id="service" name=" service">
+    <select id="service-SE" name=" service">
         <option value="Event Photography">Event Photography</option>
          <option value="Portrait Photography">Portrait Photography</option>
          <option value="Drone Photography & videography">Drone Photography & videography</option>
@@ -55,23 +56,23 @@
   <div class="stars-container">
 
     <!-- Radio button for 5-star rating -->
-    <input type="radio" id="star5" name="rating" value="5" required />
+    <input type="radio" id="star5" name="rating" value="5" required >
     <label for="star5">★</label>
 
     <!-- Radio button for 4-star rating -->
-    <input type="radio" id="star4" name="rating" value="4" />
+    <input type="radio" id="star4" name="rating" value="4" >
     <label for="star4">★</label>
 
     <!-- Radio button for 3-star rating -->
-    <input type="radio" id="star3" name="rating" value="3" />
+    <input type="radio" id="star3" name="rating" value="3" >
     <label for="star3">★</label>
 
     <!-- Radio button for 2-star rating -->
-    <input type="radio" id="star2" name="rating" value="2" />
+    <input type="radio" id="star2" name="rating" value="2" >
     <label for="star2">★</label>
 
     <!-- Radio button for 1-star rating -->
-    <input type="radio" id="star1" name="rating" value="1" />
+    <input type="radio" id="star1" name="rating" value="1" >
     <label for="star1">★</label>
   </div>
 </div>
@@ -81,10 +82,10 @@
 
 <div class="feedback">  <!-- div as the area of feedback-->
         <label>feedback</label>
-        <textarea name="feedback" rows="5" cols="50"> input here</textarea>
+        <textarea  id="feedback-SE" name="feedback" rows="5" cols="50">input here</textarea>
     </div>
 
-<input type="submit" value="submit">
+<input type="submit" value="submit" id="submit-evaluation">
 
 </form>
 </main>
@@ -107,6 +108,8 @@
     </div>
   </footer>
 
+
+  <script src="JV.js"></script>
 </body>
 
 

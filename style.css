@@ -1,13 +1,7 @@
 
 html,body{
-    height:100%; /*  للصفحة كلها حددت البودي انه ارتفاعه كل الصفحة عشان القياسات الباقية لو نسبة مئوية  كأنه جزء منها ويظبط معكم */
+  height:100%; /*  للصفحة كلها حددت البودي انه ارتفاعه كل الصفحة عشان القياسات الباقية لو نسبة مئوية  كأنه جزء منها ويظبط معكم */
 }
-
-main{
-    height:100%;/* نفس الكومنت فوق للبودي*/
-}
-
-
 
 /*--------------------------------------------------------Home Page------------------------------------------------------------*/
 
@@ -19,18 +13,22 @@ main{
 }
 a{
     text-decoration: none;
-    color: #984216;
+    color: #f0f1db;
 }
 h1{
 padding: 15px;
 
 }
 
+
+
+
 body {
   font-family: Garamond, Georgia;
   font-weight: bold;
   line-height: 1.6;
-  color: #984216;
+  color: #f0f1db;
+   
 }
 
 /* --- Header --- */
@@ -39,36 +37,42 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: #f8f1e7;
+  background: #3d512e;
   position: sticky;
   top: 0%;
   z-index: 2;
 }
 
 header .logo {
-  font-weight: bold;
+  
   font-size: 1.2rem;
+  
 }
 
 header nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #363433;
+  color: #f0f1db;
 }
 
 header .contact-icon {
   text-decoration: none;
-  background: #984216;
-  color: #f8f1e7;
+  background: #f0f1db;
+  color: #3d512e;
   padding: 8px 12px;
   border-radius: 4px;
 }
+
+
+.logo{ font-weight: bold;}
+
+
 
 /*==========breadcrumbs=======*/
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
-  background-color: #f8f1e7;
+  background-color: #3d512e;
 }
 
 /* Display list items side by side */
@@ -80,19 +84,19 @@ ul.breadcrumb li {
 /* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 8px;
-  color: #682b0c;
+  color: #f0f1db;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #984216;
+  color: #f0f1db;
   text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
-  color: #682b0c;
+  color: #f4d7b0;
   text-decoration: underline;
 }
 
@@ -114,7 +118,7 @@ ul.breadcrumb li a:hover {
   padding: 80px 20px;
   background-size: cover;                   /* make it fill the section */
   background-position: center;              /* center the image */
-  color: #fffbf7;                             /* text readable on dark image */
+  color: #f0f1db;                             /* text readable on dark image */
   text-align: center;
   padding: 100px 20px;
   margin-bottom: 100px;
@@ -127,21 +131,21 @@ ul.breadcrumb li a:hover {
 /* --- Services Section --- */
 #homepage-services {
   padding: 20px 20px ;
-  background-color: #f8f1e7;
+  background-color: #3d512e;
   border-radius: 30px;
 
 }
 
 #homepage-services h2 {
-  text-align: center;
-  margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 10px;
 
 }
 
 .homepage-service-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 7px;
  
 }
 
@@ -149,12 +153,10 @@ ul.breadcrumb li a:hover {
 .homepage-service {
   position: relative;       /* keeps .info inside */
   width: 400px;
-  height: 700px;
+  height: 650px;
   overflow: hidden;         /* hides anything outside the box */
   border-radius: 10px;
-  padding: 1px;
   text-align: center;
-  border: 0.5px solid ;
 }
 
 .homepage-service h3{
@@ -163,7 +165,7 @@ ul.breadcrumb li a:hover {
   bottom: 0;
   left: 0;
   padding: 15px;
-  color: #f8f1e7;
+  color: #f0f1db;
   
 }
 
@@ -202,9 +204,9 @@ ul.breadcrumb li a:hover {
 
 /* --- Reviews --- */
 #reviews {
-  background: #f8f1e7;
-  padding: 60px 20px;
-  border-radius: -8px;
+  background-image: url(images/arabsstock_216896_large.jpg);
+  object-fit: cover;
+  padding: 40px 20px;
 }
 
 .review-container {
@@ -225,6 +227,11 @@ ul.breadcrumb li a:hover {
   color:#363433;
 }
 
+#reviews h2{
+  color:#f0f1db ;
+  margin-bottom: 10px;
+}
+
 .review img {
   width: 60px;
   height: 60px;
@@ -239,12 +246,18 @@ ul.breadcrumb li a:hover {
 
 /* --- Gallery --- */
 #gallery {
-  padding: 60px 20px;
+  padding: 40px 20px;
+  background-color: #f0f1db;
+  border-radius: 10px;
+}
+#gallery h2{
+  color:#3d512e ;
+  margin-bottom: 10px;
 }
 
 .gallery-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 20px;
   overflow: auto;
   white-space: nowrap;
@@ -254,7 +267,7 @@ ul.breadcrumb li a:hover {
   width: 250px;
   height: 180px;
   border-radius: 8px;
-  background: #ccc;
+  background: #f0f1db;
 }
 
 /* --- Footer --- */
@@ -262,10 +275,12 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #f8f1e7;
-  color: #984216;
-  padding: 40px 50px;
-  margin-top: 20px;
+  background: #3d512e;
+  color: #f0f1db;
+  padding: 50px 50px;
+  margin-top: auto;
+
+
 }
 
 footer .footer-left,
@@ -290,13 +305,16 @@ footer p {
 /* -------------------------------------------------------- Customer dashboard styling------------------------------------------------------*/ 
 
 
-
+#CustomerDashboard{
+background-image: url(images/arabsstock_52227_large.jpg);
+height:100%;
+}
 .orders-container { /* For customer dashboard */
   width: 95%;               /* Sets the container width */
-  height: 80%;              /* Sets the container height */
-  border: 1px solid #984216;  /* Adds a black border */
+  height: 70%;              /* Sets the container height */
+  border: 1px solid #3d512e;  /* Adds a black border */
   border-radius: 10px;      /* Rounds the corners */
-  background-color: white;  /* White background color */
+  background-color: #fefef3;  /* White background color */
   padding: 20px;            /* Space between content and the border */
   box-sizing: border-box;   /* Includes padding and border in total size */
   overflow: auto;           /* Enables scroll if content overflows */
@@ -329,62 +347,99 @@ footer p {
   justify-content: space-between;    /* Distributes buttons evenly with space in between */
   margin: 20px auto auto auto;       /* Adds top margin and centers horizontally */
   width: 95%;                        /* Sets the container width */
-  height: 30%;                       /* Sets the container height */
+  height: 30%;  
+  position: relative;                /* Sets the container height */
 }
 
 
 .request-service-link,  /* Used in  customer dashboards */
 .service-evaluation-link {
-  border: 1px solid #984216;     /* Adds a solid black border around both boxes */
+  border: 1px solid #3d512e;     /* Adds a solid black border around both boxes */
   border-radius: 10px;         /* Rounds the corners for a smoother look */
   width: 36%;                  /* Sets each box width relative to its parent */
   height: 30%;                 /* Sets each box height relative to its parent */
   display: flex;               /* Enables Flexbox layout inside each box */
   justify-content: center;     /* Centers content horizontally (main axis) */
-  align-items: center;         /* Centers content vertically (cross axis) */
+  align-items: center;
+  background-color: #f8f8f6;         /* Centers content vertically (cross axis) */
 }
 
 .orders-container h3 {
   text-align: center;     /* Centers the heading text horizontally */
-  font-size: 25px;        /* Sets a fixed font size for the heading */
+  font-size: 25px; 
+   color: #3d512e;       /* Sets a fixed font size for the heading */
 }
 
 .service-name {  /* For customer dashboard */
-  text-align: center;     /* Centers the service name text */
+  text-align: center; 
+  color: #3d512e;    /* Centers the service name text */
 }
 
 .status {  /* For customer dashboard */
-  text-align: center;     /* Centers the service status text */
+  text-align: center;   
+   color: #3d512e;  /* Centers the service status text */
 }
 
 .service-name h4 {  /* For customer dashboard */
   text-align: center;     /* Centers the subheading text */
-  font-size: 16px;     /* Sets the font size */
+  font-size: 16px;  
+   color: #3d512e;   /* Sets the font size */
 }
+.order .cost, .order .date{
+   color: #3d512e;
+}
+
 
 
 
 /* --------------------------------------------------------Requst for service styling------------------------------------------------------*/ 
 
-
+#RequestService{
+  background-image: url(images/arabsstock_179534_large.jpg);
+}
 
 /* Title box at the top */
 .Request-for-Service p {
   width: 95%;                 /* Sets the width of the box relative to its parent */
-  border: 2px solid #000;     /* Adds a solid black border around the box */
+  border: 1px solid #f8f8f6;     /* Adds a solid black border around the box */
   border-radius: 10px;        /* Rounds the corners for a smoother look */
-  background: #fff;           /* Sets a white background color */
+           /* Sets a white background color */
   padding: 20px;              /* Adds inner space between content and border */
   box-sizing: border-box;     /* Includes padding and border in total element size */
   margin: 0 auto 20px auto;   /* Centers the box horizontally and adds bottom space */
 }
 
+#requests-inner-container {
+    width: 95%;
+    margin:20px auto 0 auto;
+    padding: 20px;
+    background-color: #f8f8f6;
+    border-radius: 15px;
+    overflow-y: auto; /* Scroll اذا الطلبات كثيرة */
+}
+
+.single-request {
+    background: white;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow-y: auto;      /* سكرول لو النص طويل */
+    color:#3d512e;
+
+    
+}
+
+
+
+
+
 /* ===== Main container for the form ===== */
 .Request-service-form {
   width: 95%;                     /* Sets the overall form width relative to its parent */
-  height: 70%;                    /* Sets the form height relative to its parent */
-  margin: 20px auto;              /* Adds vertical spacing and centers horizontally */
-  border: 2px solid #000;         /* Adds a solid black border around the form */
+                     /* Sets the form height relative to its parent */
+  margin: 20px auto  ;              /* Adds vertical spacing and centers horizontally  */
+  border: 1px solid #3d512e;         /* Adds a solid black border around the form */
   border-radius: 10px;            /* Rounds the corners for a smoother look */
   padding: 32px;                  /* Adds inner spacing between content and border */
   box-sizing: border-box;         /* Includes padding and border in total size */
@@ -392,7 +447,10 @@ footer p {
   display: flex;                  /* Enables Flexbox layout for form content */
   flex-wrap: wrap;                /* Allows items to wrap onto multiple lines */
   justify-content: space-between; /* Distributes items: left column + right column */
-  align-items: flex-start;        /* Aligns items to the top of the container */
+  align-items: flex-start;   
+  background-color: #f8f8f6;     /* Aligns items to the top of the container */
+
+  
 }
 
 
@@ -405,6 +463,7 @@ footer p {
   flex: 1 1 47%;                /* Takes roughly half the form width and wraps on smaller screens */
   order: 1;                     /* Defines the display order (first element) */
   margin-bottom: 20px;          /* Adds spacing below each row */
+  color: #3d512e; 
 }
 
 
@@ -417,6 +476,7 @@ footer p {
   order: 2;                     /* Displays as the second item in order */
   margin-bottom: 20px;          /* Adds spacing below the row */
   padding-right: 10px;          /* Adds slight inner space on the right side */
+  color: #3d512e; 
 }
 
 
@@ -428,6 +488,7 @@ footer p {
   flex: 1 1 47%;                /* Uses flexible sizing (about half width, wraps on small screens) */
   order: 3;                     /* Displays as the third item in order */
   margin-bottom: 20px;          /* Adds spacing below the row */
+  color: #3d512e; 
 }
 
 
@@ -437,7 +498,8 @@ footer p {
   flex-direction: column;        /* Stacks label above the textarea/input */
   flex: 1 1 100%;                /* Takes the full width of the container */
   order: 4;                      /* Appears as the fourth item in order */
-  margin-top: 8px;               /* Adds a small top spacing */
+  color: #3d512e;  
+   margin-top: 8px;               /* Adds a small top spacing */
 }
 
 /* ===== Labels (consistent spacing) ===== */
@@ -446,6 +508,7 @@ footer p {
   min-width: 120px;              /* Sets a fixed minimum width for alignment consistency */
   white-space: nowrap;           /* Prevents text from wrapping to the next line */
   margin-right: 10px;            /* Adds equal spacing between label and input field */
+  color: #3d512e; 
 }
 
 
@@ -455,7 +518,7 @@ footer p {
 .Request-service-form input[type="datetime-local"] {
   width: 220px;                  /* Sets a consistent width for all fields */
   padding: 8px 10px;             /* Adds inner space for better readability */
-  border: 1px solid #000;        /* Adds a solid black border around inputs */
+  border: 1px solid #3d512e;        /* Adds a solid black border around inputs */
   border-radius: 4px;            /* Slightly rounds the corners for a softer look */
   box-sizing: border-box;        /* Includes border and padding in the total element size */
 }
@@ -467,8 +530,8 @@ footer p {
 }
 
 .Request-service-form textarea {
-  width: 100%;                    /* Makes the textarea span the full width of its container */
-  min-height: 150px;              /* Sets a minimum height for comfortable typing space */
+  width: 80%;                    /* Makes the textarea span the full width of its container */
+  min-height: 40px;              /* Sets a minimum height for comfortable typing space */
   padding: 10px;                  /* Adds inner space between text and border */
   border: 1.5px solid #9e9e9e;    /* Adds a soft gray border for a clean look */
   border-radius: 4px;             /* Rounds the corners slightly */
@@ -511,7 +574,7 @@ footer p {
   width: 95%;                    /* Form width relative to parent */
   height: 70%;                   /* Percentage height (requires parent with explicit height) */
   margin: 10px auto 30px;        /* Top and bottom spacing; centers horizontally */
-  border: 2px solid #000;        /* Solid black border */
+  border: 1px solid #3d512e;        /* Solid black border */
   border-radius: 10px;           /* Rounded corners */
   padding: 32px;                 /* Inner spacing for comfortable layout */
   box-sizing: border-box;        /* Include border and padding in total size */
@@ -519,6 +582,7 @@ footer p {
   flex-wrap: wrap;               /* Allow items to wrap to the next line */
   justify-content: space-between;/* Distribute items (left column + right column) */
   align-items: flex-start;       /* Align items to the top on the cross-axis */
+  background-color: #f8f8f6;  
 }
 
 
@@ -538,6 +602,7 @@ footer p {
   font-weight: 700;              /* Makes label text bold for better readability */
   min-width: 120px;              /* Sets a fixed minimum width to align all labels evenly */
   margin-right: 10px;            /* Adds uniform space between label and input field */
+color: #3d512e;
 }
 
 
@@ -547,7 +612,7 @@ footer p {
 .Service-Evaluation-form select {
   width: 220px;               /* Sets a fixed width for consistency */
   padding: 8px 10px;          /* Adds inner space for comfortable text spacing */
-  border: 1px solid #000;     /* Adds a solid black border */
+  border: 1px solid #363433;     /* Adds a solid black border */
   border-radius: 4px;         /* Rounds corners slightly for a smoother look */
   box-sizing: border-box;     /* Includes border and padding in total width */
   background: #fff;           /* White background for clarity */
@@ -569,6 +634,7 @@ footer p {
 /* ===== Feedback label ===== */
 .feedback label {
   margin-bottom: 10px;          /* Adds space between the label and textarea */
+color: #3d512e;
 }
 
 /* ===== Feedback textarea ===== */
@@ -596,64 +662,59 @@ footer p {
   cursor: pointer;               /* Pointer cursor on hover */
 }
 
-/* ===== ⭐ Stars rating (below Service - left side) ===== */
+
+
+/* ===== Stars rating (below Service - left side) ===== */
 .stars-rating {
-  display: flex;               /* Places the text and stars in a horizontal row (Lecture6 – Flexbox) */
-  align-items: center;         /* Vertically centers the rating label and stars (Lecture6 – Flexbox alignment) */
-  justify-content: flex-start; /* Aligns all content to the left (same as Service field) */
-  flex: 1 1 47%;               /* Takes about half the form width (Lecture6 – Flex sizing) */
-  order: 2;                    /* Appears after the Service field (Lecture6 – order property) */
-  margin-bottom: 20px;         /* Adds space below the rating section (Lecture6 – Box model margin) */
-  gap: 8px;                    /* Adds space between the "Rating:" label and the stars (Lecture6 – Flex gap) */
+  display: flex;               
+  align-items: center;        
+  justify-content: flex-start; 
+  flex: 1 1 47%;               
+  order: 2;                    
+  margin-bottom: 20px;         
+  gap: 8px;                    
 }
 
 /* ===== Rating label text ===== */
 .rating-label {
-  font-weight: 700;            /* Makes the label text bold for readability (Lecture5 – font-weight) */
-  min-width: 120px;            /* Keeps label width consistent with Service label (Lecture6 – Box model width) */
-  font-size: 14px;             /* Matches font size used across form fields (Lecture5 – font-size) */
-  text-align: left;            /* Aligns the text to the left (Lecture5 – text-align) */
+  font-weight: 700;           
+  min-width: 120px;           
+  font-size: 14px;            
+  text-align: left;           
+  color: #3d512e;
 }
 
 /* ===== Stars container ===== */
 .stars-container {
-  display: flex;               /* Arranges all stars in a single horizontal line (Lecture6 – Flexbox) */
-  flex-direction: row-reverse; /* Reverses the order so that the first star is on the left visually (Lecture6 – flex-direction) */
-  align-items: center;         /* Vertically centers the stars within the container (Lecture6 – alignment) */
+  display: flex;               
+  flex-direction: row-reverse; 
+  align-items: center;         
 }
 
 /* ===== Hide radio buttons ===== */
 .stars-container input[type="radio"] {
-  display: none;               /* Hides the radio buttons (Lecture7 – Form controls styling) */
+  display: none;               
 }
 
-/* ===== Stars style ===== */
+/* ===== Star appearance ===== */
 .stars-container label {
-  display: inline-block;       /* Keeps stars next to each other horizontally (Lecture5 – display property) */
-  font-size: 24px;             /* Controls the size of each star (Lecture5 – font-size) */
-  color: #ccc;                 /* Default gray color for unselected stars (Lecture5 – color) */
-  cursor: pointer;             /* Changes cursor to a pointer on hover (Lecture7 – Form usability) */
-  margin: 0;                   /* Removes default margins (Lecture6 – Box model margin) */
-  padding: 0;                  /* Removes inner spacing (Lecture6 – Box model padding) */
-  margin-left: -4px;           /* Reduces spacing between stars for tighter alignment (Lecture6 – Box model fine-tuning) */
-  transition: color 0.2s ease; /* Smooth color transition when hovering (extra visual effect) */
+  font-size: 30px;
+  color: #ccc;             /* النجوم قبل الاختيار */
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
-/* ===== Hover effect – highlight from left to right ===== */
+/* hover: يلوّن النجمة وكل اللي بعدها في الاتجاه العكسي */
 .stars-container label:hover,
 .stars-container label:hover ~ label {
-  color: gold;                 /* Changes hovered stars to gold (Lecture7 – :hover pseudo-class) */
+  color: gold;
 }
 
-/* ===== Checked effect – keep selected stars gold ===== */
-.stars-container input:checked ~ label {
-  color: #ccc;                 /* Resets all stars to gray before applying gold (Lecture7 – :checked) */
+/* checked: يلوّن النجمة المختارة وكل اللي بعدها */
+.stars-container input[type="radio"]:checked ~ label {
+  color: gold;
 }
 
-.stars-container input:checked + label,
-.stars-container input:checked + label ~ label {
-  color: gold;                 /* Highlights selected stars from left to right (Lecture7 – :checked + sibling selector) */
-}
 
 
 
@@ -664,13 +725,18 @@ footer p {
 
 
  /* ===== Services container ===== */
+
+
+ #PD-main{
+  height:100%;
+ }
 /* Used in both Customer and Provider Dashboards */
 .services-container {  
-  width: 95%;                /* Sets container width relative to the page (Lecture6 – Box model width) */
-  height: 80%;               /* Sets container height (Lecture6 – Box model height) */
-  border: 3px solid black;   /* Adds a solid border around the container (Lecture6 – border) */
+  width: 90%;                /* Sets container width relative to the page (Lecture6 – Box model width) */
+  height: 60%;               /* Sets container height (Lecture6 – Box model height) */
+  border: 1px solid #363433;   /* Adds a solid border around the container (Lecture6 – border) */
   border-radius: 10px;       /* Rounds the container corners (Lecture6 – border-radius) */
-  background-color: white;   /* Sets white background (Lecture5 – background-color) */
+  background-color: #f8f8f6;    /* Sets white background (Lecture5 – background-color) */
   padding: 20px;             /* Adds inner spacing between content and border (Lecture6 – padding) */
   box-sizing: border-box;    /* Includes border & padding inside total width/height (Lecture6 – box-sizing) */
   overflow: auto;            /* Enables scrollbars when content overflows (Lecture6 – overflow) */
@@ -681,7 +747,7 @@ footer p {
 /* Used in both dashboards for navigation options */
 .add-a-new-service-link,
 .manage-staff-member-link {
-  border: 2px solid black;   /* Defines visible border for the link box (Lecture6 – border) */
+  border: 1px solid #363433;   /* Defines visible border for the link box (Lecture6 – border) */
   border-radius: 10px;       /* Gives rounded corners for visual consistency (Lecture6 – border-radius) */
   width: 36%;                /* Sets box width relative to container (Lecture6 – width) */
   height: 30%;               /* Sets box height (Lecture6 – height) */
@@ -689,7 +755,30 @@ footer p {
   justify-content: center;   /* Horizontally centers content (Lecture6 – justify-content) */
   align-items: center;       /* Vertically centers content (Lecture6 – align-items) */
 }
+.services-container h3,.service h4{
+   color: #3d512e; 
+}
+#PD-main h1{
+  color: #3d512e; 
+}
+.service img{
+   width: 250px;
+  height: 180px;
+  border-radius: 8px;
+  background: #f0f1db;
+}
 
+.service-container{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.service h4{
+  display: inline;
+  margin-left: 10px;
+  
+}
 
 
 /*-----------------------------------------------------------tables(Dalal)------------------------------------------------------------------*/
@@ -728,7 +817,7 @@ th {
 td {
   background-color: #fff;
   color: #444;
-  font-style: italic;
+ /* font-style: italic;*/
 }
 
 
@@ -773,38 +862,45 @@ tr:hover td{
 
 /*  services */
 
+#services-main{
+  background-color:#fefef3 ;
+}
+
   .header-services {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
+
+   .header-services h1{
+    color: #3d512e;
+   }
   
   
   .ServicePage-services-container {
     display: flex;
-    flex-wrap: wrap;
+   flex-wrap: wrap;
     justify-content: center; 
     gap: 30px; 
+    overflow: hidden;
     
   }
-
-
-  
-  
-
   .service-box {
-            width: 280px;
-            height: 550px;
+            width: 230px;
+            height: 500px;
             border: 1px solid #ccc;
-            padding: 15px;
+            padding: 10px;
             background-color: #fafafa;
             text-align: left;
             display: flex;
             flex-direction: column;
             align-items: flex-start; 
+            justify-content: space-between;
             border-radius: 10px;  
-            margin-bottom : 10px; ;     
+            margin-bottom : 10px; ;  
+            flex: 0 0 30%;
+             max-width: 30%;   
 }
                
      
@@ -814,6 +910,8 @@ tr:hover td{
   .service-box h3 {
     font-size: 18px;
     margin-bottom: 10px;
+        color: #3d512e;
+
   }
   
  
@@ -822,38 +920,56 @@ tr:hover td{
     height: 250px;
     object-fit: cover;
     background-color: #eee;
-    margin-bottom: 10px;
+    margin: 0 auto ;
     display: block;
     border-radius: 8px;
+    justify-content: center;
   }
   
   
   .service-box p {
     font-size: 14px;
     margin: 5px 0;
+        color: #3d512e;
+
   }
   
   .price {
    
     font-weight: bold;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 20px;
+        color: #3d512e;
+
+  }
+  .sort-area label{
+        color: #3d512e;
+
   }
 
 
 
   /*----------------------------------------------------------------------- about us=-------------------------------------------- */
 
-#About {text-align:left;}
 
-#about2 {text-align:center;}
+h2.table{color:  #3d512e;}
 
-#join{text-align:center;} 
+
+#About {text-align:left;
+    color: #3d512e;
+}
+
+#about2 {text-align:center;
+    color: #3d512e;
+}
+
+#join{text-align:center;
+    color: #3d512e;
+} 
 
   .team {
   display: flex;
   overflow: auto;       
-  white-space: nowrap;
   gap: 20px;
   padding: 20px;
   width: 80%;             
@@ -881,6 +997,26 @@ tr:hover td{
   }
   
  
+.lenzah {
+
+
+width: 70%;           
+  margin: 0 auto;       
+  text-align: center;
+
+
+}
+
+.photo-team {
+
+width: 75%;         
+  border-radius: 15px;
+  margin-top: 20px; 
+
+}
+
+
+
    #own {
     border: 1px solid #ccc;
     width: 84%;
@@ -908,6 +1044,8 @@ tr:hover td{
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+        color: #3d512e;
+
   }
   
   
@@ -917,6 +1055,8 @@ tr:hover td{
     border: 1px solid #aaa;
     box-sizing: border-box;
     border-radius: 8px;
+        color: #3d512e;
+
   }
   
   
@@ -931,13 +1071,16 @@ tr:hover td{
   
 
 
- a{text-decoration: none; color: black;}
+ a
+ {text-decoration: none;
+   color: black;}
 a:active{ background-color: #a9a7a7; color: black;}
 
 /*=================================================Manage staff Member page===========================================*/
 h1 {
       font-size: 28px;
       margin-bottom: 25px;
+      color: #3d512e;
     }
 
     .first{
@@ -1035,6 +1178,9 @@ h1 {
     background-color: #f9f9f9;
     box-sizing: border-box;
   }
+  .second h2{
+    color: #3d512e;
+  }
   
   /* كل صف فيه عمودين */
   .row {
@@ -1084,32 +1230,45 @@ textarea { width: 100%;}
 
 
 /*==============================================================Add a service page+==========================================================*/
-   /* Section 1: header box */
+   
+#addService-main{
+  background-image: url(images/drone.jpeg);
+}
+/* Section 1: header box */
     .hero{
-      border: 1.5px solid #2b2b2b;
+      border: 1px solid #2b2b2b;
       border-radius: 10px;
       padding: 28px;
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      background-color: #fefef3;
+      height: 25%;     
     }
     .hero h1{
-      margin: 0 0 10px;
-      font-size: 40px;
+      margin: 0 0 5px;
+      font-size: 30px;
+      color: #3d512e;
     }
     .hero p{
       margin: 0;
       max-width: 640px;
       margin-inline: auto;
+      color: #3d512e;
+
     }
 
     /* Section 2: form box */
     .panel{
-      border:  1.5px solid #2b2b2b;
-      border-radius: 1opx;
+      border:  1px solid #2b2b2b;
+      border-radius: 10px;
       padding: 30px;
       max-width: 760px;
       margin: 0 auto;
       background:#f6f6f6;
+    }
+    .panel h3{
+            color: #3d512e;
+
     }
 
   
@@ -1119,7 +1278,8 @@ textarea { width: 100%;}
     }
     .file-row{
       display:flex; justify-content:center;
-      margin-bottom: 22px;
+      margin-bottom: 15px;
+      
     }
     input[type="file"]{
       width: 100%;
@@ -1127,6 +1287,8 @@ textarea { width: 100%;}
       border-radius: 4px;
       padding: 10px;
       background:#fff;
+            color: #3d512e;
+
     }
 
    
@@ -1138,6 +1300,7 @@ textarea { width: 100%;}
   justify-content: center;   /* يخليهم في الوسط */
   gap: 60px;                 /*المسافة بينهم    */
   margin: 24px 0;
+
 }
 .form-row .field{
   display: flex;
@@ -1148,18 +1311,9 @@ textarea { width: 100%;}
 /*  مقاس المستطيلات     */
 .form-row .field input{
   width: 260px;
-  height: 34px;
+  height: 10px;
   box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
 
     label{ font-weight: 700; display:block; margin-bottom: 6px; }
     
@@ -1175,7 +1329,7 @@ textarea { width: 100%;}
       font: inherit;
       background:#fff;
     }
-   textarea{ min-height: 140px;}
+   textarea{ min-height: 80px;}
 
     .submit-row{
       display:flex; justify-content:center; margin-top: 18px;
@@ -1184,7 +1338,7 @@ textarea { width: 100%;}
       border:  1.5px solid #2b2b2b;
       background:#eee;
       padding: 10px 26px;
-      border-radius: 999px;
+      border-radius: 10px;
       font-weight: 700;
       cursor:pointer;
     }
