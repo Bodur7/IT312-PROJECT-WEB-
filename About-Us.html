@@ -7,7 +7,7 @@
 
 
 </head>
-<body>
+<body class="aboutpage">
 
     <header>
     <div class="logo"><a href="HOMEPAGE.html " style="color: #f0f1db;" >Lenzah</a></div>
@@ -61,7 +61,7 @@
 
 <div>
       <img src="images/staff/newwomen.jpg" alt="Member 7">
-      <p><a  href="sara.html" >LAMA ABDULLAH</a></p>
+      <p><a  href="sara.html" >LAMAI ABDULLAH</a></p>
     </div>
 
   <div>
@@ -75,51 +75,67 @@
   <div class="lenzah">
 
   <img  src="images/staff/lenzah.jpg"  alt="member team" class="photo-team">
-    
+   <div id="word">
+<p>
+  Our team is not just a group of employees — they are creative minds who turn passion into breathtaking art.
+If you see that spark in yourself, join us and become part of a team that inspires excellence!
+</p>
+
+   </div>
+  
+
+
   </div>
 
 
+<div class="moving-bar">
+  <div class="moving-text">
+    Welcome to our Lenzah team – Where every moment becomes a timeless memory ✦ Creative Photography ✦ Inspired by real emotions ✦
+  </div>
+</div>
 
-  <form action="aboutus.html" method="post" enctype="multipart/form-data" id="own">
+
+
+  <form action="About-Us.html" method="post" enctype="multipart/form-data" id="own" >
     <h2 id="join">Join our team!</h2>
   
     <div class="row">
       <div>
         <label for="name">Name:</label>
-        <input class="aboutus-input" type="text" name="name" value="unknown" maxlength="20"  id="name" required>
+        <input class="aboutus-input" type="text" name="name" value="unknown" maxlength="20"  id="name" >
       </div>
       <div>
         <label for="photo">Photo:</label>
-        <input class="aboutus-input" type="file" name="photo" id="photo" required>
+        <input class="aboutus-input" type="file" name="photo" id="photo" >
       </div>
     </div>
   
     <div class="row">
       <div>
         <label for="date">Date of birth:</label>
-        <input class="aboutus-input" type="date" name="date" id="date"  required>
+        <input class="aboutus-input" type="date" name="date" id="date"  >
       </div>
       <div>
         <label for="email">Email:</label>
-        <input class="aboutus-input" type="email" name="email" value="unknown" maxlength="20" id="email" required>
+        <input class="aboutus-input" type="email" name="email" value="unknown" maxlength="20" id="email" >
       </div>
     </div>
   
     <div class="row">
       <div>
         <label for="area">Area of expertise:</label>
-        <input class="aboutus-input" type="text" name="area" value="unknown" maxlength="50" id="area" required>
+        <input class="aboutus-input" type="text" name="area" value="unknown" maxlength="50" id="area" >
       </div>
       <div>
         <label for="skill">Skills:</label>
-        <input class="aboutus-input" type="text" name="skill" value="unknown" maxlength="50" id="skill" required>
+        <input class="aboutus-input" type="text" name="skill" value="unknown" maxlength="50" id="skill" >
       </div>
     </div>
   
     <div class="row">
       <div>
         <label for="edu">Education:</label>
-        <input class="aboutus-input" type="text" name="edu" value="unknown" maxlength="50" id="edu" required>
+        <input class="aboutus-input" type="text" name="edu" value="unknown" maxlength="50" id="edu" >
       </div>
       <div>
         <label for="text">Message:</label>
@@ -149,6 +165,56 @@
     </div>
   </footer>
 
+
+
+<script>
+
+document.getElementById("own").onsubmit = function() {
+
+  var name = document.getElementById("name").value;
+  var photoInput = document.getElementById("photo");
+  var date = document.getElementById("date").value;
+  var email = document.getElementById("email").value;
+  var area = document.getElementById("area").value;
+  var skill = document.getElementById("skill").value;
+  var edu = document.getElementById("edu").value;
+
+  if(name == "" || date == "" || email == "" ||  area == "" || skill == "" ||  edu == "" || photoInput.files.length == 0){
+    alert("Please fill all fields.");
+    return false;
+  }
+
+  var firstChar = name.charAt(0);
+  if(firstChar >= "0" && firstChar <= "9"){
+    alert("Name cannot start with a number.");
+    return false;
+  }
+
+  var file = photoInput.files[0];
+  if(!file.type.startsWith("image/")){
+    alert("Photo field accepts only image files.");
+    return false;
+  }
+
+  var year = parseInt(date.split("-")[0]);
+  if(year > 2008){
+    alert("Date of birth must not be after 2008.");
+    return false;
+  }
+
+  alert(
+    "Dear " + name + ",\n\n" +
+    "Thank you for choosing Lenzah, where we turn moments into timeless memories.\n\n" +
+    "Your request has been received and our team is excited to review your artistic profile.\n\n" +
+    "Stay tuned, we’ll be in touch soon!\n\n" +
+    "Warm regards,\n" +
+    "Lenzah Photography Team 📸"
+  );
+
+  return true;
+};
+
+</script>
 
 </body>
 </html>
