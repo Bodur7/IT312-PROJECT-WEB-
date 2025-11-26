@@ -1098,7 +1098,7 @@ margin: 20px;
 
 
 .photo-team {
-  width: 50%;
+  width: 60%;
   max-width: 900px;
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -1467,5 +1467,6 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
+
 
 
