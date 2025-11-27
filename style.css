@@ -742,15 +742,38 @@ color: #3d512e;
 
 /* tables css */
 
+.sarapage{
+
+background-color: #f0f1db;
+
+
+}
+
+
+.saudpage{
+
+background-color: #f0f1db;
+
+
+}
+
+.mpage{
+
+background-color: #f0f1db;
+
+
+}
+
+
 table {
   width: 70%;
   margin: 40px auto;
   border-collapse: collapse; 
-  background-color: #fdfdfd;
-  border: 1px outset #cfcfcf;
+  border: 1px outset ;
   font-size: 18px;
   border-radius: 13px;
   overflow: hidden;
+  
 }
 
 
@@ -762,7 +785,7 @@ th, td {
 
 
 th {
-  background-color: #f3f3f3;
+  background-color: rgb(228, 230, 213);
   color: #222;
   font-weight: 600;
   width: 180px;
@@ -771,7 +794,7 @@ th {
 
 
 td {
-  background-color: #fff;
+  background-color: #e0e1d2;
   color: #444;
  /* font-style: italic;*/
 }
@@ -785,14 +808,14 @@ h2.table {
 
 .photo-box {
   text-align: center;
-  background-color: #fff;
+  background-color: #e0e1d2;
 }
 
 .photo-box img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 3px solid #ccc;
+  border: 3px hidden ;
   object-fit: cover;
 }
 
@@ -810,16 +833,15 @@ ul li {
 }
 
 tr:hover td{
-  background-color: #f7faff;
+  background-color: #f4f4f4;
 }
 
 /*---------------------------------------------------Services Page =---------------------------------------------------*/
 
-
 /*  services */
 
 #services-main{
-  background-color:#fefef3 ;
+  background-color:#f0f1db ;
 }
 
   .header-services {
@@ -837,17 +859,18 @@ tr:hover td{
   .ServicePage-services-container {
     display: flex;
    flex-wrap: wrap;
-    justify-content: center; 
+  justify-content: center; 
     gap: 30px; 
     overflow: hidden;
+    
     
   }
   .service-box {
             width: 230px;
             height: 500px;
-            border: 1px solid #ccc;
+            border-style:hidden;
             padding: 10px;
-            background-color: #fafafa;
+            background-color: #e0e1d2;
             text-align: left;
             display: flex;
             flex-direction: column;
@@ -880,8 +903,14 @@ tr:hover td{
     display: block;
     border-radius: 8px;
     justify-content: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.40);
+     transition: 0.3s ease;
   }
   
+.service-box img:hover {
+  transform: scale(1.03);
+}
+
   
   .service-box p {
     font-size: 14px;
@@ -898,14 +927,32 @@ tr:hover td{
         color: #3d512e;
 
   }
-  .sort-area label{
-        color: #3d512e;
+  
+ .sort-area {
+  background-color: #e0e1d2;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-  }
-
+.sort-area select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  
+}
 
 
   /*----------------------------------------------------------------------- about us=-------------------------------------------- */
+
+.aboutpage{
+
+ background-color: #f0f1db; 
+}
 
 
 h2.table{color:  #3d512e;}
@@ -928,57 +975,127 @@ h2.table{color:  #3d512e;}
   overflow: auto;       
   gap: 20px;
   padding: 20px;
-  width: 80%;             
-  margin: 0 auto;         
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  width: 100%;             
+  margin: 30px ;         
+  border: none;
+  background-color: #eff0e0 ;
   border-radius: 8px;
   }
   
 
-  .team div {
-    border: 1px solid#ccc;
-    padding: 30px;
-    text-align: center;
-    width: 190px;
-    font-weight: bold;
-  }
+
+
+.team div {
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #3d512e;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: #e0e1d2 ;
   
+}
+
+
+
+
   .team img {
-    border-radius: 50%;
+    border-radius: 15% ;
     width: 100px;
     height: 100px;
     object-fit: cover;
+    
 
   }
   
  
 .lenzah {
-
-
-width: 70%;           
-  margin: 0 auto;       
-  text-align: center;
-
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+ background: #3d512e;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+margin: 20px;
 
 }
+
+.lenzah #word {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.lenzah:hover img {
+  transform: scale(1.05);
+}
+
+.lenzah:hover #word {
+  opacity: 1;
+}
+
+
+
 
 .photo-team {
-
-width: 75%;         
-  border-radius: 15px;
-  margin-top: 20px; 
-
+  width: 60%;
+  max-width: 900px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+
+
+
+.moving-bar {
+  overflow: hidden;
+  background: none;
+  padding-top: 70px;
+  padding-bottom: 2px;
+  margin: 30px 0;
+}
+
+.moving-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: #3f5d50;
+  font-size: 25px;
+  animation: scrollText 12s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+
+
+
+
+
 
 
 
    #own {
+    background-color: #e0e1d2;
     border: 1px solid #ccc;
+    border-radius: 5%;
     width: 84%;
     margin: 30px auto;
     padding: 20px;
-    background-color: #f9f9f9;
     box-sizing: border-box;
   }
   
@@ -1031,6 +1148,7 @@ width: 75%;
  {text-decoration: none;
    color: black;}
 a:active{ background-color: #a9a7a7; color: black;}
+
 
 /*=================================================Manage staff Member page===========================================*/
 h1 {
@@ -1301,4 +1419,5 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
+
 
