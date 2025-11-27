@@ -114,75 +114,7 @@
 
 
 
-<script>
-
-function sortServices(){
-
-  var sortValue = document.getElementById("sort").value;
-  var container = document.getElementById("servicesContainer");
-
-  var services = container.getElementsByClassName("service-box");
-  var servicesArray = [];
-
-  
-  for(var i = 0; i < services.length; i++){
-    servicesArray.push(services[i]);
-  }
-
-  
-  if(sortValue == "A-Z"){
-    servicesArray.sort(function(a, b){
-      var nameA = a.getElementsByTagName("h3")[0].innerHTML;
-      var nameB = b.getElementsByTagName("h3")[0].innerHTML;
-
-      if(nameA > nameB) return 1;
-      if(nameA < nameB) return -1;
-      return 0;
-    });
-  }
-
-  
-  if(sortValue == "Z-A"){
-    servicesArray.sort(function(a, b){
-      var nameA = a.getElementsByTagName("h3")[0].innerHTML;
-      var nameB = b.getElementsByTagName("h3")[0].innerHTML;
-
-      if(nameA < nameB) return 1;
-      if(nameA > nameB) return -1;
-      return 0;
-    });
-  }
-
-  
-  if(sortValue == "low-high"){
-    servicesArray.sort(function(a, b){
-      return getPrice(a) - getPrice(b);
-    });
-  }
-
-  
-  if(sortValue == "high-low"){
-    servicesArray.sort(function(a, b){
-      return getPrice(b) - getPrice(a);
-    });
-  }
-
-  
-  container.innerHTML = "";
-  for(var j = 0; j < servicesArray.length; j++){
-    container.appendChild(servicesArray[j]);
-  }
-}
-
-
-
-function getPrice(service){
-  var priceText = service.getElementsByClassName("price")[0].innerHTML;
-  var parts = priceText.split(" ");
-  return parseInt(parts[3]);   
-}
-
-</script>
+<script src="JV.js"> </script>
 
 
 
@@ -195,3 +127,4 @@ function getPrice(service){
 
 </body>
 </html>
+
