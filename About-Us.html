@@ -167,55 +167,9 @@ If you see that spark in yourself, join us and become part of a team that inspir
 
 
 
-<script>
-
-document.getElementById("own").onsubmit = function() {
-
-  var name = document.getElementById("name").value;
-  var photoInput = document.getElementById("photo");
-  var date = document.getElementById("date").value;
-  var email = document.getElementById("email").value;
-  var area = document.getElementById("area").value;
-  var skill = document.getElementById("skill").value;
-  var edu = document.getElementById("edu").value;
-
-  if(name == "" || date == "" || email == "" ||  area == "" || skill == "" ||  edu == "" || photoInput.files.length == 0){
-    alert("Please fill all fields.");
-    return false;
-  }
-
-  var firstChar = name.charAt(0);
-  if(firstChar >= "0" && firstChar <= "9"){
-    alert("Name cannot start with a number.");
-    return false;
-  }
-
-  var file = photoInput.files[0];
-  if(!file.type.startsWith("image/")){
-    alert("field accepts only image files .");
-    return false;
-  }
-
-  var year = parseInt(date.split("-")[0]);
-  if(year > 2008){
-    alert("Date of birth must not be after 2008.");
-    return false;
-  }
-
-  alert(
-    "Dear " + name + ",\n\n" +
-    "Thank you for choosing Lenzah, where we turn moments into timeless memories.\n\n" +
-    "Your request has been received and our team is excited to review your artistic profile.\n\n" +
-    "Stay tuned, we’ll be in touch soon!\n\n" +
-    "Warm regards,\n" +
-    "Lenzah Photography Team 📸"
-  );
-
-  return true;
-};
-
-</script>
+<script src="JV.js"> </script>
 
 </body>
 </html>
+
 
