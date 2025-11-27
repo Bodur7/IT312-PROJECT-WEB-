@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
        <meta charset="UTF-8">
+        <script src="manageStaffMember.js"></script>
         <title>Manage Staff Members </title>
         <link rel="stylesheet" href="style.css"><!-- to link with css-->
 
@@ -104,7 +105,7 @@
       </div>
     </div>
 
-    <button type="submit" class="delete-btn">Delete</button>
+    <button type="button" class="delete-btn" onclick="deletesStaff()">Delete</button>
   </form>
 </div>
 
@@ -121,45 +122,45 @@
     <div class="row">
       <div>
         <label class="labelSecond">Name:</label>
-        <input class="formInput" type="text">
+        <input class="formInput" type="text" id="WName">
       </div>
       <div>
         <label class="labelSecond">Photo:</label>
-        <input class="formInput" type="file">
+        <input class="formInput" type="file" id="WPhoto">
       </div>
     </div>
   
     <div class="row">
       <div>
         <label class="labelSecond">Date of birth:</label>
-        <input class="formInput" type="date">
+        <input class="formInput" type="date" id="WDob">
       </div>
       <div>
         <label class="labelSecond">Email:</label>
-        <input class="formInput" type="email">
+        <input class="formInput" type="email" id="WEmail">
       </div>
     </div>
   
     <div class="row">
       <div>
         <label class="labelSecond">Area of expertise:</label>
-        <input class="formInput" type="text">
+        <input class="formInput" type="text" id="WArea">
       </div>
       <div>
         <label class="labelSecond">Skills:</label>
-        <input class="formInput" type="text">
+        <input class="formInput" type="text" id="WSkills">
       </div>
     </div>
   
     <div class="row">
       <div>
         <label class="labelSecond">Education:</label>
-        <input class="formInput" type="text">
+        <input class="formInput" type="text" id="WEdu">
       </div>
       
     </div>
   
-    <button class="add" type="submit">Add</button>
+    <button class="add" type="button" onclick="addStaff()">Add</button>
   </form>
     
   <!-- Footer -->
