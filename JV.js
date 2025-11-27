@@ -144,3 +144,207 @@ if (submitBtn_se != null) {
         window.location.href = "CustomerDashboard.html";
     });
 }
+
+
+
+/*-------------------------------------------------Add a service page------------------------------------------------------*/
+
+
+function addService() {
+
+
+    // 1) نجيب قيم الفورم
+    var name = document.getElementById("serviceName").value;
+    var price = document.getElementById("price").value;
+    var desc = document.getElementById("desc").value;
+    var photo = "images/arabsstock_52227_large.jpg";
+
+
+    //  التحقق من الحقول الفارغة
+
+    if (name == "" || price == "" || desc == "" || photo == "") {
+        alert("Please fill all fields.");
+        return; 
+    }
+
+    
+    //  التحقق من أن الاسم ما يبدأ برقم
+
+    if (!isNaN(name.charAt(0))) {  
+        alert("Service name cannot start with a number.");
+        return;
+    }
+
+  
+    //  التحقق من أن السعر رقم
+
+    if (isNaN(price)) {
+        alert("Price must be a number.");
+        return;
+    }
+
+
+    var service = {
+        name: name,
+        price: Number(price),
+        desc: desc,
+        photo: photo
+    };
+
+    
+    //  نجلب الخدمات الموجودة (array)
+ 
+    var services = [];
+
+    if (localStorage.getItem("services") != null) {
+        services = JSON.parse(localStorage.getItem("services"));
+    }
+
+
+    //  نضيف الخدمة الجديدة
+
+    services.push(service);
+
+
+    //  نخزن array في localStorage
+
+    localStorage.setItem("services", JSON.stringify(services));
+
+
+
+
+    alert("Service " + name + " added successfully!");
+
+  
+    // 10) مسح الفورم
+
+    document.getElementById("serviceName").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("desc").value = "";
+    document.getElementById("servePhoto").value = "";
+}
+
+
+/*-------------------------------------------------Provider dashboard page------------------------------------------------------*/
+
+window.onload = function() {
+
+    var container = document.getElementById("serviceList");
+
+    var services = localStorage.getItem("services");
+
+    if (services != null) {
+        services = JSON.parse(services);
+
+        for (var i = 0; i < services.length; i++) {
+container.innerHTML += `
+    <div class="service">
+        <div class="service-container">
+            <img src="${services[i].photo}" alt="">
+            <h4>${services[i].name}</h4>
+        </div>
+        <p class="price">${services[i].price} SAR</p>
+       
+    </div>
+`;
+
+         
+        }
+    }
+};
+ 
+
+
+
+/*-------------------------------------------------Manage staff member page------------------------------------------------------*/
+
+// DELETE STAFF MEMBERS 
+function deleteStaff() {
+
+    var checkboxes = document.getElementsByName("staff");
+    var anySelected = false;
+
+    // نتحقق هل في أحد مختار
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            anySelected = true;
+            break;
+        }
+    }
+
+    // إذا مافي أحد مختار
+    if (!anySelected) {
+        alert("Please select at least one member");
+        return;
+    }
+
+    // نسأل المستخدم confirm
+    var confirmDelete = confirm("Are you sure you want to delete the selected members?");
+
+    if (confirmDelete) {
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                var memberDiv = checkboxes[i].parentNode.parentNode;
+                memberDiv.remove();
+            }
+        }
+    }
+}
+
+
+// ADD NEW MEMBER 
+function addStaff() {
+
+
+    var name = document.getElementById("WName").value;
+    var dob = document.getElementById("WDob").value;
+    var email = document.getElementById("WEmail").value;
+    var area = document.getElementById("WArea").value;
+    var skills = document.getElementById("WSkills").value;
+    var edu = document.getElementById("WEdu").value;
+    var photo = "images/profilepic.webp";
+
+    // فاليديشن: أي حقل فاضي؟
+    if (name == "" || dob == "" || email == "" || area == "" || skills == "" || edu == "" || photo == "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    // الاسم ما يبدأ برقم
+    if (!isNaN(name.charAt(0))) {
+        alert("Name cannot start with a number");
+        return;
+    }
+
+    // نضيف العضو في أعلى القائمة:
+    var container = document.querySelector(".grid");
+
+    var newMember =
+        "<div class='member'>" +
+            "<label>" +
+                "<input type='checkbox' name='staff'>" +
+                "<img src='" + photo + "'>" +
+                "<span>" + name + "</span>" +
+            "</label>" +
+        "</div>";
+
+    container.innerHTML += newMember;
+
+    alert("New staff member " + name + " added successfully!");
+
+    // نفرغ الفورم
+    document.getElementById("WName").value = "";
+    document.getElementById("WDob").value = "";
+    document.getElementById("WEmail").value = "";
+    document.getElementById("WArea").value = "";
+    document.getElementById("WSkills").value = "";
+    document.getElementById("WEdu").value = "";
+    document.getElementById("WPhoto").value = "";
+}
+
+
+
+
+
+
