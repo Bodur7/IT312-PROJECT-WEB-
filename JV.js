@@ -441,9 +441,11 @@ function getPrice(service){
 
 /* ----------------------------------------------- about us page ---------------------------------------------------------------*/
 
+var aboutForm = document.getElementById("own");
 
+if (aboutForm != null) {
 
-document.getElementById("own").onsubmit = function() {
+aboutForm.onsubmit = function() {
 
   var name = document.getElementById("name").value;
   var photoInput = document.getElementById("photo");
@@ -488,6 +490,7 @@ document.getElementById("own").onsubmit = function() {
   return true;
 };
 
+}
 
 
 
