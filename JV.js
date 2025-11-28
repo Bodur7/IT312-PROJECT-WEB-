@@ -1,5 +1,118 @@
 console.log("checking whether the java script file working or not");
 
+
+function toggleMenu() { //shows the navigation
+  document.getElementById("navLinks").classList.toggle("active");
+}
+/////////////////
+
+
+function toggleTheme() {//changes the theme using class
+ document.body.classList.toggle("light-theme");
+  const themeIcon = document.getElementById("themeIcon");
+   if (document.body.classList.contains("light-theme")) {
+    themeIcon.src = "images/icons/moon.svg";  // Dark mode icon
+
+  } else {
+        themeIcon.src="images/icons/sun.svg";   // Light mode icon
+
+  } 
+  
+}
+//////////////////////////====back to top button============================////
+const backToTopBtn = document.getElementById("backToTop");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+backToTopBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+//====================Clock at footer=======================//////
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  document.getElementById("clock").textContent = timeString;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // call immediately once
+
+
+//==================== extra section part=============///////
+const container = document.getElementById("autoScroll");
+const images = document.querySelectorAll(".gallery-img");
+
+
+let direction = 1;  // 1 = right, -1 = left
+
+function autoScroll() {
+  container.scrollLeft += direction;
+
+  // If reached right end, switch direction
+  if (container.scrollLeft + container.clientWidth >= container.scrollWidth-2) {
+    direction = -1;
+  }
+
+  // If reached left end, switch direction
+  if (container.scrollLeft <= 0) {
+    direction = 1;
+  }
+}
+
+
+
+let scrollInterval = setInterval(autoScroll, 30);
+
+container.addEventListener("mouseenter", () => {
+  clearInterval(scrollInterval);
+});
+
+container.addEventListener("mouseleave", () => {
+  scrollInterval = setInterval(autoScroll, 30);
+});
+
+
+
+
+function highlightCenterImage() {
+  const containerCenter = container.scrollLeft + container.clientWidth / 2;
+  
+  let closestImg = null;
+  let closestDistance = Infinity;
+
+  images.forEach(img => {
+    const rect = img.getBoundingClientRect();
+    const imgCenter = rect.left + rect.width / 2;
+    const distance = Math.abs((window.innerWidth / 2) - imgCenter);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestImg = img;
+    }
+  });
+
+  images.forEach(img => img.classList.remove("active"));
+  if (closestImg) closestImg.classList.add("active");
+}
+
+container.addEventListener("scroll", highlightCenterImage);
+window.addEventListener("resize", highlightCenterImage);
+
+// Trigger once at start
+highlightCenterImage();
+
+///////////////////////////////////////
+
 /*-------------------------------------------------Request service page------------------------------------------------------*/
 
 // امسك زر صفحة الريكوست سيرفس
@@ -491,10 +604,3 @@ aboutForm.onsubmit = function() {
 };
 
 }
-
-
-
-
-
-
-
