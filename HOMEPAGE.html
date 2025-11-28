@@ -2,33 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1.0">
  
   <title>Lenzah</title>
   <link rel="stylesheet" href="style.css"><!-- to link with css-->
-  
-   
 </head>
-
 
 
 <body>
   <!-- Header -->
   <header>
-    <div id=" logoC" class="logo"><a href="HOMEPAGE.html" style="color: #f0f1db;" >Lenzah</a></div>
-    <nav>
-      <a href="ServicesPage.html">Services</a>
-      <a href="About-Us.html">About us</a>
-      <a href="CustomerDashboard.html">Customer dashboard</a>
-      <a href="Provider's_Dashboard.html">Provider dashboard</a>
-    </nav>
+    <div id=" logoC" class="logo"><a href="HOMEPAGE.html"  ><img src="images/logo/Lenzah logo.svg" alt="logo"  ></a></div>
+    <nav class="navBar">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="navLinks" id="navLinks" >
+      <li><a href="ServicesPage.html">Services</a></li>
+      <li><a href="About-Us.html">About us</a></li>
+      <li><a href="CustomerDashboard.html">Customer dashboard</a></li>
+      <li><a href="Provider's_Dashboard.html">Provider dashboard</a></li>
+    </ul>
+  </nav>
+  <div class="topRight">
     <a href="mailto:someone@example.com" class="contact-icon">Contact us</a>
-  </header>
+    <button id="themeToggle" onclick="toggleTheme()"><img id="themeIcon" src="images/icons/sun.svg" alt="theme icon" title="Change Theme"> </button>
+  </div>
+</header>
 
   <!-- Hero / Vision Section -->
   <section id="vision"> 
     <video autoplay muted loop id="homepagevid" >
-  <source src="images/droneVid.mp4" type="video/mp4">
+  <source src="images/main video/STA0004_259 (5).mp4" type="video/mp4">
     </video>
   
     <h2>OUR MISSION</h2>
@@ -40,19 +43,19 @@
     <h2>Services</h2>
     <div class="homepage-service-container">
       <div class="homepage-service">
-        <img src="images/arabsstock_145695_large_40.jpg" alt="Portrait Photography">
+        <img src="images/services/portraitGirl3.jpg" alt="Portrait Photography">
         <h3>Portrait Photography</h3>
         <div class="service-info">
         <p>Portrait Photography<br>captures every special moment — from weddings and corporate events to private celebrations.</p></div>
       </div>
       <div class="homepage-service">
-        <img src="images/saudi_weddings_arab_bridal_inspo.jpg" alt="Event Photography">
+        <img src="images/services/saudi_weddings.jpg" alt="Event Photography">
         <h3>Event Photography</h3>
         <div class="service-info">
         <p>Event Photography<br>Capture the energy and emotions of weddings, parties, and corporate events with photos that beautifully tell your story</p></div>
       </div>
       <div class="homepage-service">
-        <img src="images/arabsstock_116632_large.jpg" alt="Drone Photography">
+        <img src="images/services/droneBaha.jpg" alt="Drone Photography">
         <h3>Drone Photography & Videography</h3>
         <div class="service-info">
         <p>Drone Photography & Videography<br>Experience breathtaking aerial shots that showcase your events, real estate, or landscapes</p></div>
@@ -64,25 +67,25 @@
   <section id="reviews">
     <h2>Reviews</h2>
     <div class="review-container">
-      <div class="review">
+      <div class="review" id="rev1">
         <img src="images/profilepic.webp" alt="Reviewer photo">
         <h4>Bodur</h4>
         <p class="rating">★★★★★</p>
         <p>“it is the best website for the services they offer”</p>
       </div>
-      <div class="review">
+      <div class="review" id="rev2">
         <img src="images/profilepic.webp" alt="Reviewer photo">
         <h4>Sondos</h4>
         <p class="rating">★★★★★</p>
         <p>“Very quick and fantastic services”</p>
       </div>
-      <div class="review">
+      <div class="review" id="rev3">
         <img src="images/profilepic.webp" alt="Reviewer photo">
         <h4>Dalal</h4>
         <p class="rating">★★★★★</p>
         <p>“I really loved the variety in services they offer”</p>
       </div>
-      <div class="review">
+      <div class="review" id="rev4">
         <img src="images/profilepic.webp" alt="Reviewer photo">
         <h4>Jana</h4>
         <p class="rating">★★★★★</p>
@@ -96,16 +99,29 @@
   <!-- Gallery / Famous Shoots -->
   <section id="gallery">
     <h2>Our Famous Shoots</h2>
-    <div class="gallery-container">
+    <div class="gallery-container" id="autoScroll">
       
-      <img src="images/saudi_weddings_arab_bridal_inspo.jpg" alt="Shoot 2">
-      <img src="images/samantha-gades-RHAtRIT3-CE-unsplash.jpg" alt="Shoot 3">
-      <img src="images/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="Shoot 4">
-      <img src="images/foto-pettine-IfjHaIoAoqE-unsplash.jpg" alt="Shoot 5">
-      <img src="images/pexels-bertellifotografia-2608516.jpg" alt="Shoot 6">
+      <img src="images/services/weddingRing.jpg" alt="Shoot 1" class="gallery-img">
+      <img src="images/services/iceEvent.jpg" alt="Shoot 2" class="gallery-img">
+      <img src="images/services/nakhl.jpg" alt="Shoot 3" class="gallery-img">
+      <img src="images/services/womanSadu.jpg" alt="Shoot 4"class="gallery-img">
+      <img src="images/services/product1.jpg" alt="Shoot 5" class="gallery-img">
+      <img src="images/services/portraitMan.jpg" alt="Shoot 6" class="gallery-img">
+      <img src="images/services/saudi_weddings.jpg" alt="Shoot 7" class="gallery-img">
+      <img src="images/services/portraitGirl2.jpg" alt="Shoot 8" class="gallery-img">
+<!-------------------Duplicated images---------------------------->
+          <img src="images/services/weddingRing.jpg" alt="Shoot 1" class="gallery-img">
+      <img src="images/services/iceEvent.jpg" alt="Shoot 2" class="gallery-img">
+      <img src="images/services/nakhl.jpg" alt="Shoot 3" class="gallery-img">
+      <img src="images/services/womanSadu.jpg" alt="Shoot 4"class="gallery-img">
+      <img src="images/services/product1.jpg" alt="Shoot 5" class="gallery-img">
+      <img src="images/services/portraitMan.jpg" alt="Shoot 6" class="gallery-img">
+      <img src="images/services/saudi_weddings.jpg" alt="Shoot 7" class="gallery-img">
+      <img src="images/services/portraitGirl2.jpg" alt="Shoot 8" class="gallery-img">
       
     </div>
   </section>
+  <button id="backToTop">↑ Back to Top</button>
 
   <!-- Footer -->
   <footer>
@@ -116,10 +132,12 @@
     </div>
     <div class="footer-right">
       <h4>Contact us</h4>
-      <p style="display:flex; align-items:center; gap:8px;"><img src="images/instaicon.png" alt="Instagram" >@Lenzah (Instagram)</p>
-      <p style="display:flex; align-items:center; gap:8px;"><img src="images/mail.png" alt="email"> @ggg.com (Email)</p>
-      <p style="display:flex; align-items:center; gap:8px;"><img src="images/phoneicon.png" alt="phone number" >+966000000000 (Phone)</p>
+      <p ><img src="images/icons/insta icon.png" alt="Instagram" >Lenzah (Instagram)</p>
+      <p ><img src="images/icons/email.png" alt="email"> Lenzah@website.com</p>
+      <p ><img src="images/icons/phone.png" alt="phone number" >+966000000000</p>
     </div>
+    <p>Current Time: <span id="clock"></span></p>
   </footer>
+  <script src="JV.js"></script>
 </body>
 </html>
