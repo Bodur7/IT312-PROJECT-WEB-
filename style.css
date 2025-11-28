@@ -1,7 +1,9 @@
 
 html,body{
-    height:100%; /*  للصفحة كلها حددت البودي انه ارتفاعه كل الصفحة عشان القياسات الباقية لو نسبة مئوية  كأنه جزء منها ويظبط معكم */
+  overflow-x: hidden;
+  height:100%; /*  للصفحة كلها حددت البودي انه ارتفاعه كل الصفحة عشان القياسات الباقية لو نسبة مئوية  كأنه جزء منها ويظبط معكم */
 }
+
 
 /*--------------------------------------------------------Home Page------------------------------------------------------------*/
 
@@ -27,36 +29,122 @@ body {
   color: #f0f1db;
 }
 
+/*---------------------------------light theme -----------*/
+.light-theme header{
+  background-color: #fffbeb;
+}
+.light-theme header a,.light-theme .navBar{
+    color: #3d512e;
+    font-family: "Times New Roman";
+    background-color: #fffbeb;
+}
+.light-theme button, .light-theme .hamburger, .light-theme .contact-icon,.light-theme .navLinks, .light-theme footer{
+    background-color: #fffbeb;
+    color:#3d512e ;
+}
+.light-theme .logo img{
+  filter: invert(20%) sepia(27%) saturate(450%) hue-rotate(60deg) brightness(45%) contrast(90%);
+
+}
+.light-theme .contact-icon{
+  background-color: #3d512e;
+  color: #fffbeb;
+}
+#themeToggle{
+   background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+    margin: 0px;
+
+}
+#themeIcon {
+  width: 25px;
+  height: 25px;
+}
+/*===============================back to top button ======================*/
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  z-index: 999;
+}
+
 /* --- Header --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 10px;
   background: #3d512e;
   position: sticky;
   top: 0%;
   z-index: 2;
 }
 
-header .logo {
-  
-  font-size: 1.2rem;
-  
+
+header .logo img{
+  width: 100px;  
+   filter: brightness(95%) sepia(10%);
 }
 
 header nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #f0f1db;
+  color: #fffbeb;
 }
+nav li{
+  display: inline;
+}
+
+
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+    order: 1;
+}
+.navBar{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo {
+  order: 0;
+}
+
+.topRight{
+  position: relative;   /* position at the top right */
+  top: 10px;            /* distance from top */
+  right: 10px;          /* distance from right */
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  gap: 3px;  
+  margin-right: 30px;
+}
+
+
+
 
 header .contact-icon {
   text-decoration: none;
-  background: #f0f1db;
+  background: #fffbeb;
   color: #3d512e;
-  padding: 8px 12px;
-  border-radius: 4px;
+    padding: 6px 6px;
+    border-radius: 4px;
+    font-size: small;
 }
 
 
@@ -64,9 +152,10 @@ header .contact-icon {
 
 
 
+
 /*==========breadcrumbs=======*/
 ul.breadcrumb {
-  padding: 10px 16px;
+  padding: 5px 13px;
   list-style: none;
   background-color: #3d512e;
 }
@@ -74,19 +163,19 @@ ul.breadcrumb {
 /* Display list items side by side */
 ul.breadcrumb li {
   display: inline;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 8px;
-  color: #f0f1db;
+  color: #fffbeb;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #f0f1db;
+  color: #fffbeb;
   text-decoration: none;
 }
 
@@ -105,9 +194,11 @@ ul.breadcrumb li a:hover {
   height: 80%;
   object-fit: cover; /* make the video fill the section */
   z-index: -1;
-  opacity: 0.7; /* slightly dim so text stands out */
+  /*opacity: 0.7; /* slightly dim so text stands out */
 }
-
+video {
+  filter: brightness(60%);
+}
 /* --- Vision / Mission Section --- */
 #vision {
   text-align: center;
@@ -124,10 +215,12 @@ ul.breadcrumb li a:hover {
   margin-bottom: 15px;
 }
 
+
 /* --- Services Section --- */
 #homepage-services {
+  margin-top: 20px;
   padding: 20px 20px ;
-  background-color: #3d512e;
+  background-color: #fffbeb;
   border-radius: 30px;
 
 }
@@ -135,6 +228,7 @@ ul.breadcrumb li a:hover {
 #homepage-services h2 {
   text-align: left;
   margin-bottom: 10px;
+  color: #3d512e;
 
 }
 
@@ -149,7 +243,7 @@ ul.breadcrumb li a:hover {
 .homepage-service {
   position: relative;       /* keeps .info inside */
   width: 400px;
-  height: 650px;
+  height: 550px;
   overflow: hidden;         /* hides anything outside the box */
   border-radius: 10px;
   text-align: center;
@@ -200,9 +294,9 @@ ul.breadcrumb li a:hover {
 
 /* --- Reviews --- */
 #reviews {
-  background-image: url(images/arabsstock_216896_large.jpg);
+  background-image: url(images/services/nakhl.jpg);
   object-fit: cover;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .review-container {
@@ -221,6 +315,7 @@ ul.breadcrumb li a:hover {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   text-align: center;
   color:#363433;
+  overflow: hidden;
 }
 
 #reviews h2{
@@ -240,10 +335,11 @@ ul.breadcrumb li a:hover {
   color :rgb(247, 247, 107)
 }
 
+
 /* --- Gallery --- */
 #gallery {
-  padding: 40px 20px;
-  background-color: #f0f1db;
+  padding: 20px;
+  background-color: #fffbeb;
   border-radius: 10px;
 }
 #gallery h2{
@@ -257,14 +353,33 @@ ul.breadcrumb li a:hover {
   gap: 20px;
   overflow: auto;
   white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 10px;
 }
+
 
 .gallery-container img {
   width: 250px;
   height: 180px;
   border-radius: 8px;
-  background: #f0f1db;
+    background: #f0f1db;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(40%);   /* darker fade */
+  transform: scale(0.9);
 }
+
+.gallery-container img.active {
+    filter: brightness(100%);
+  border-radius: 8px;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* --- Footer --- */
 footer {
@@ -272,7 +387,7 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   background: #3d512e;
-  color: #f0f1db;
+  color: #fffbeb;
   padding: 50px 50px;
   margin-top: auto;
 
@@ -282,6 +397,7 @@ footer {
 footer .footer-left,
 footer .footer-right {
   max-width: 30%;
+  overflow: auto;
 }
 
 footer h4 {
@@ -292,25 +408,89 @@ footer p {
   margin-bottom: 5px;
 }
 .footer-right img{
-  height:1.2rem;
    width:1.2rem;
 }
+.footer-right{
+  order: 2;
+}
+.footer-right p{
+  display:flex;
+   align-items:center;
+    gap:8px;
+}
 
+/* Small screens: stack menu vertically */
 
+@media (max-width: 700px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+    /* hide the nav links by default */
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #3e4b2f;
+  }
+
+  /* show when active */
+  .navLinks.active {
+    display: flex;
+  }
+.logo {
+    order: 1;   /* move logo to the center */
+    margin: 0 auto; /* center it */
+  }
+
+  .hamburger {
+    order: 1;   /* hamburger moves to far left */
+  }
+
+  .navBar {
+    justify-content: space-between;
+  }
+  .topRight{
+    order: 2;
+  }
+
+  #rev3, #rev4{
+    display: none;
+  }
+  .homepage-service{
+    height: 200px;
+  }
+  .homepage-service p{
+    font-size: x-small;
+  }
+
+      .review {
+        height: 180px;
+        width: 200px;
+    }
+  .review p{
+    font-size: x-small;
+  }
+
+}
 
 /* -------------------------------------------------------- Customer dashboard styling------------------------------------------------------*/ 
 
 
 #CustomerDashboard{
-background-image: url(images/arabsstock_52227_large.jpg);
+background-image: url(images/services/drone.jpeg);
 height:100%;
+}
+#CustomerDashboard h1{
+  color:#fffbeb ;
 }
 .orders-container { /* For customer dashboard */
   width: 95%;               /* Sets the container width */
   height: 70%;              /* Sets the container height */
   border: 1px solid #3d512e;  /* Adds a black border */
   border-radius: 10px;      /* Rounds the corners */
-  background-color: #fefef3;  /* White background color */
+  background-color: #fffbeb;  /* White background color */
   padding: 20px;            /* Space between content and the border */
   box-sizing: border-box;   /* Includes padding and border in total size */
   overflow: auto;           /* Enables scroll if content overflows */
@@ -362,7 +542,7 @@ height:100%;
   display: flex;               /* Enables Flexbox layout inside each box */
   justify-content: center;     /* Centers content horizontally (main axis) */
   align-items: center;
-  background-color: #f8f8f6;         /* Centers content vertically (cross axis) */
+  background-color: #fffbeb;         /* Centers content vertically (cross axis) */
 }
 
 .orders-container h3 {
@@ -396,7 +576,7 @@ height:100%;
 /* --------------------------------------------------------Requst for service styling------------------------------------------------------*/ 
 
 #RequestService{
-  background-image: url(images/arabsstock_179534_large.jpg);
+  background-image: url(images/services/nakhlFarm.jpg);
 }
 
 /* Title box at the top */
@@ -424,7 +604,7 @@ height:100%;
   flex-wrap: wrap;                /* Allows items to wrap onto multiple lines */
   justify-content: space-between; /* Distributes items: left column + right column */
   align-items: flex-start;   
-  background-color: #f8f8f6;     /* Aligns items to the top of the container */
+  background-color: #fffffb;     /* Aligns items to the top of the container */
 
   
 }
@@ -536,14 +716,16 @@ height:100%;
 
 .image-evaluation {
   display: block;             /* Makes the element a block-level element */
-  width: 95%;                 /* Matches the form’s width for visual alignment */
+  width: 60%;                 /* Matches the form’s width for visual alignment */
   height: 180px;              /* Sets an appropriate image height */
   margin: 16px auto 10px;     /* Centers the image and adds spacing below */
   border-radius: 12px;        /* Rounds the corners for a soft appearance */
  
   background: #d9d9d9;        /* Light gray fallback color if image fails to load */
 }
-
+#SE{
+  background-color: #fffbeb;
+}
 
 /* ===== Service Evaluation form container ===== */
 .Service-Evaluation-form {
@@ -685,6 +867,7 @@ color: #3d512e;
 
  #PD-main{
   height:100%;
+  background-color: #fffbeb ;
  }
 /* Used in both Customer and Provider Dashboards */
 .services-container {  
@@ -692,7 +875,7 @@ color: #3d512e;
   height: 60%;               /* Sets container height (Lecture6 – Box model height) */
   border: 1px solid #363433;   /* Adds a solid border around the container (Lecture6 – border) */
   border-radius: 10px;       /* Rounds the container corners (Lecture6 – border-radius) */
-  background-color: #f8f8f6;    /* Sets white background (Lecture5 – background-color) */
+  background-color: #fffffb;    /* Sets white background (Lecture5 – background-color) */
   padding: 20px;             /* Adds inner spacing between content and border (Lecture6 – padding) */
   box-sizing: border-box;    /* Includes border & padding inside total width/height (Lecture6 – box-sizing) */
   overflow: auto;            /* Enables scrollbars when content overflows (Lecture6 – overflow) */
@@ -703,6 +886,7 @@ color: #3d512e;
 /* Used in both dashboards for navigation options */
 .add-a-new-service-link,
 .manage-staff-member-link {
+  background-color: #fffffb;
   border: 1px solid #363433;   /* Defines visible border for the link box (Lecture6 – border) */
   border-radius: 10px;       /* Gives rounded corners for visual consistency (Lecture6 – border-radius) */
   width: 36%;                /* Sets box width relative to container (Lecture6 – width) */
@@ -744,7 +928,7 @@ color: #3d512e;
 
 .sarapage{
 
-background-color: #f0f1db;
+background-color: #fffbeb ;
 
 
 }
@@ -752,14 +936,14 @@ background-color: #f0f1db;
 
 .saudpage{
 
-background-color: #f0f1db;
+background-color: #fffbeb ;
 
 
 }
 
 .mpage{
 
-background-color: #f0f1db;
+background-color: #fffbeb ;
 
 
 }
@@ -785,7 +969,7 @@ th, td {
 
 
 th {
-  background-color: rgb(228, 230, 213);
+  background-color: #e7f3de;
   color: #222;
   font-weight: 600;
   width: 180px;
@@ -794,7 +978,7 @@ th {
 
 
 td {
-  background-color: #e0e1d2;
+  background-color: #fefef3;
   color: #444;
  /* font-style: italic;*/
 }
@@ -808,7 +992,7 @@ h2.table {
 
 .photo-box {
   text-align: center;
-  background-color: #e0e1d2;
+  background-color: #fefef3;
 }
 
 .photo-box img {
@@ -951,7 +1135,7 @@ tr:hover td{
 
 .aboutpage{
 
- background-color: #f0f1db; 
+ background-color: #fffbeb ; 
 }
 
 
@@ -975,10 +1159,10 @@ h2.table{color:  #3d512e;}
   overflow: auto;       
   gap: 20px;
   padding: 20px;
-  width: 100%;             
-  margin: 30px ;         
+  margin: 20px auto;
+  width: 90%;        
   border: none;
-  background-color: #eff0e0 ;
+  background-color: #fffffb ;
   border-radius: 8px;
   }
   
@@ -1013,7 +1197,7 @@ h2.table{color:  #3d512e;}
 position: relative;
 overflow: hidden;
 border-radius: 10px;
- background: #3d512e;
+ background: #fefff2;
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -1061,7 +1245,7 @@ margin: 20px;
 .moving-bar {
   overflow: hidden;
   background: none;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 2px;
   margin: 30px 0;
 }
@@ -1081,16 +1265,8 @@ margin: 20px;
 
 
 
-
-
-
-
-
-
-
-
    #own {
-    background-color: #e0e1d2;
+    background-color: #fffffb;
     border: 1px solid #ccc;
     border-radius: 5%;
     width: 84%;
@@ -1151,6 +1327,10 @@ a:active{ background-color: #a9a7a7; color: black;}
 
 
 /*=================================================Manage staff Member page===========================================*/
+#MSM{
+  background-color: #fffbeb ;
+}
+
 h1 {
       font-size: 28px;
       margin-bottom: 25px;
@@ -1251,6 +1431,7 @@ h1 {
     padding: 20px;
     background-color: #f9f9f9;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   .second h2{
     color: #3d512e;
@@ -1306,7 +1487,7 @@ textarea { width: 100%;}
 /*==============================================================Add a service page+==========================================================*/
    
 #addService-main{
-  background-image: url(images/drone.jpeg);
+  background-image: url(images/services/drone.jpeg);
 }
 /* Section 1: header box */
     .hero{
@@ -1419,5 +1600,4 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
-
 
