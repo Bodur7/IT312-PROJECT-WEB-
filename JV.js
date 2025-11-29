@@ -584,8 +584,9 @@ aboutForm.onsubmit = function() {
   var area = document.getElementById("area").value;
   var skill = document.getElementById("skill").value;
   var edu = document.getElementById("edu").value;
-
-  if(name == "" || date == "" || email == "" ||  area == "" || skill == "" ||  edu == "" || photoInput.files.length == 0){
+var message =document.getElementById("text").value;
+  
+  if(name == "" || date == "" || email == "" ||  area == "" || skill == "" ||  edu == "" || photoInput.files.length == 0 || message == ""){
     alert("Please fill all fields.");
     return false;
   }
@@ -621,6 +622,7 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
 
 
 
