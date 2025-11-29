@@ -421,7 +421,6 @@ function deleteStaff() {
     }
 }
 
-
 // ADD NEW MEMBER 
 function addStaff() {
 
@@ -471,15 +470,6 @@ function addStaff() {
     document.getElementById("WEdu").value = "";
     document.getElementById("WPhoto").value = "";
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -629,6 +619,7 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
 
 
 
