@@ -1,15 +1,18 @@
-console.log("checking whether the java script file working or not");
 
 
 function toggleMenu() { //shows the navigation
-  document.getElementById("navLinks").classList.toggle("active");
+  const nav = document.getElementById("navLinks");
+  if(!nav) return;
+  nav.classList.toggle("active");
 }
 /////////////////
 
 
 function toggleTheme() {//changes the theme using class
- document.body.classList.toggle("light-theme");
   const themeIcon = document.getElementById("themeIcon");
+  if(!themeIcon) return;
+ document.body.classList.toggle("light-theme");
+  
    if (document.body.classList.contains("light-theme")) {
     themeIcon.src = "images/icons/moon.svg";  // Dark mode icon
 
@@ -22,22 +25,34 @@ function toggleTheme() {//changes the theme using class
 //////////////////////////====back to top button============================////
 const backToTopBtn = document.getElementById("backToTop");
 
-window.onscroll = function () {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
+if (backToTopBtn) {
 
-backToTopBtn.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
   });
-};
 
+  backToTopBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    console.log("Back to Top clicked ✅");
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+}
 //====================Clock at footer=======================//////
+const clock= document.getElementById("clock");
+if(clock){
 function updateClock() {
   const now = new Date();
   const timeString = now.toLocaleTimeString();
@@ -46,13 +61,13 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock(); // call immediately once
-
+}
 
 //==================== extra section part=============///////
 const container = document.getElementById("autoScroll");
 const images = document.querySelectorAll(".gallery-img");
 
-
+if (container && images.length > 0) {
 let direction = 1;  // 1 = right, -1 = left
 
 function autoScroll() {
@@ -110,8 +125,10 @@ window.addEventListener("resize", highlightCenterImage);
 
 // Trigger once at start
 highlightCenterImage();
-
+}
 ///////////////////////////////////////
+
+console.log("checking whether the java script file working or not");
 
 /*-------------------------------------------------Request service page------------------------------------------------------*/
 
@@ -604,3 +621,9 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
+
+
+
+
+
