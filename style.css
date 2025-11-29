@@ -76,6 +76,15 @@ body {
   display: none; /* hidden by default */
   z-index: 999;
 }
+#backToTop {
+  display: block !important;
+  background: #333 !important;
+  color: white !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+}
 
 /* --- Header --- */
 header {
@@ -1638,5 +1647,6 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
+
 
 
