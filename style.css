@@ -707,7 +707,25 @@ height:100%;
   font-weight: 600;              /* Semi-bold text */
 }
 
+#requests-inner-container {
+    width: 95%;
+    margin:auto;
+    padding: 20px;
+    background-color: #f8f8f6;
+    border-radius: 15px;
+    max-height: 400px;    
+    overflow-y: auto;
+}
 
+.single-request {
+    background: white;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    color:#000000;
+}
 
 
 /* -------------------------------------------------------Evaluation of service styling------------------------------------------------------*/ 
@@ -822,35 +840,55 @@ color: #3d512e;
 
 /* ===== Stars rating (below Service - left side) ===== */
 .stars-rating {
-  display: flex;               /* Places the text and stars in a horizontal row (Lecture6 – Flexbox) */
-  align-items: center;         /* Vertically centers the rating label and stars (Lecture6 – Flexbox alignment) */
-  justify-content: flex-start; /* Aligns all content to the left (same as Service field) */
-  flex: 1 1 47%;               /* Takes about half the form width (Lecture6 – Flex sizing) */
-  order: 2;                    /* Appears after the Service field (Lecture6 – order property) */
-  margin-bottom: 20px;         /* Adds space below the rating section (Lecture6 – Box model margin) */
-  gap: 8px;                    /* Adds space between the "Rating:" label and the stars (Lecture6 – Flex gap) */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 47%;
+    order: 2;
+    margin-bottom: 20px;
+    gap: 8px;
 }
 
 /* ===== Rating label text ===== */
 .rating-label {
-  font-weight: 700;            /* Makes the label text bold for readability (Lecture5 – font-weight) */
-  min-width: 120px;            /* Keeps label width consistent with Service label (Lecture6 – Box model width) */
-  font-size: 14px;             /* Matches font size used across form fields (Lecture5 – font-size) */
-  text-align: left;            /* Aligns the text to the left (Lecture5 – text-align) */
-color: #3d512e;
+    font-weight: 700;
+    min-width: 120px;
+    font-size: 14px;
+    text-align: left;
+    color: #3d512e;
 }
 
 /* ===== Stars container ===== */
 .stars-container {
-  display: flex;               /* Arranges all stars in a single horizontal line (Lecture6 – Flexbox) */
-  flex-direction: row-reverse; /* Reverses the order so that the first star is on the left visually (Lecture6 – flex-direction) */
-  align-items: center;         /* Vertically centers the stars within the container (Lecture6 – alignment) */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 /* ===== Hide radio buttons ===== */
 .stars-container input[type="radio"] {
-  display: none;               /* Hides the radio buttons (Lecture7 – Form controls styling) */
+    display: none;
 }
+
+/* ===== Star appearance ===== */
+.stars-container label {
+    font-size: 30px;
+    color: #ccc; /* النجوم قبل الاختيار */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* hover: يلوّن النجمة وكل اللي بعدها في الاتجاه العكسي */
+.stars-container label:hover,
+.stars-container label:hover ~ label {
+    color: gold;
+}
+
+/* checked: يلوّن النجمة المختارة وكل اللي بعدها */
+.stars-container input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
 
 
 
@@ -1600,4 +1638,5 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
+
 
