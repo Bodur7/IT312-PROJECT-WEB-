@@ -585,25 +585,42 @@ height:100%;
 /* --------------------------------------------------------Requst for service styling------------------------------------------------------*/ 
 
 #RequestService{
-  background-image: url(images/services/nakhlFarm.jpg);
+ /* background-image: url(images/services/nakhlFarm.jpg);*/
+ background-image: url(images/services/drone.jpeg);
 }
 
 /* Title box at the top */
-.Request-for-Service p {
-  width: 95%;                 /* Sets the width of the box relative to its parent */
-  border: 1px solid #f8f8f6;     /* Adds a solid black border around the box */
-  border-radius: 10px;        /* Rounds the corners for a smoother look */
-           /* Sets a white background color */
-  padding: 20px;              /* Adds inner space between content and border */
-  box-sizing: border-box;     /* Includes padding and border in total element size */
-  margin: 0 auto 20px auto;   /* Centers the box horizontally and adds bottom space */
+.Request-for-Service{
+  border: 1px solid #2b2b2b;
+      border-radius: 10px;
+
+      padding: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+      background-color: #fefef3;
+      height: 25%;        /* Centers the box horizontally and adds bottom space */
+      
 }
+
+ .Request-for-Service h1{
+      margin: 0 0 5px;
+      font-size: 30px;
+      color: #3d512e;
+    }
+    .Request-for-Service p{
+      margin: 0;
+      
+      margin-inline: auto;
+      color: #3d512e;
+
+    }
+
 
 /* ===== Main container for the form ===== */
 .Request-service-form {
-  width: 80%;                     /* Sets the overall form width relative to its parent */
+  width: 60%;                     /* Sets the overall form width relative to its parent */
                      /* Sets the form height relative to its parent */
-  margin: 20px auto;              /* Adds vertical spacing and centers horizontally */
+  margin:  auto;              /* Adds vertical spacing and centers horizontally */
   border: 1px solid #3d512e;         /* Adds a solid black border around the form */
   border-radius: 10px;            /* Rounds the corners for a smoother look */
   padding: 32px;                  /* Adds inner spacing between content and border */
@@ -613,7 +630,7 @@ height:100%;
   flex-wrap: wrap;                /* Allows items to wrap onto multiple lines */
   justify-content: space-between; /* Distributes items: left column + right column */
   align-items: flex-start;   
-  background-color: #fffffb;     /* Aligns items to the top of the container */
+background-color: #fefef3; 
 
   
 }
@@ -717,13 +734,19 @@ height:100%;
 }
 
 #requests-inner-container {
-    width: 95%;
+    
     margin:auto;
     padding: 20px;
     background-color: #f8f8f6;
     border-radius: 15px;
     max-height: 400px;    
     overflow-y: auto;
+    display: none;
+}
+
+#recent-request{
+  display: none;
+  color: #fffbeb;
 }
 
 .single-request {
@@ -733,7 +756,7 @@ height:100%;
     padding: 15px;
     overflow-y: scroll;
     margin-bottom: 10px;
-    color:#000000;
+   color: #3d512e; 
 }
 
 
@@ -1647,7 +1670,6 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
-
 
 
 
