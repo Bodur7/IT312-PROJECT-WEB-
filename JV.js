@@ -357,9 +357,11 @@ function addService() {
 
 /*-------------------------------------------------Provider dashboard page------------------------------------------------------*/
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     var container = document.getElementById("serviceList");
+
+    if (!container) return;  
 
     var services = localStorage.getItem("services");
 
@@ -367,22 +369,19 @@ window.onload = function() {
         services = JSON.parse(services);
 
         for (var i = 0; i < services.length; i++) {
-container.innerHTML += `
-    <div class="service">
-        <div class="service-container">
-            <img src="${services[i].photo}" alt="">
-            <h4>${services[i].name}</h4>
-        </div>
-        <p class="price">${services[i].price} SAR</p>
-       
-    </div>
-`;
-
-         
+            container.innerHTML += `
+                <div class="service">
+                    <div class="service-container">
+                        <img src="${services[i].photo}" alt="">
+                        <h4>${services[i].name}</h4>
+                    </div>
+                    <p class="price">${services[i].price} SAR</p>
+                </div>
+            `;
         }
     }
-};
- 
+
+});
 
 
 
@@ -630,6 +629,7 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
 
 
 
