@@ -280,6 +280,7 @@ if (submitBtn_se != null) {
 /*-------------------------------------------------Add a service page------------------------------------------------------*/
 
 
+
 function addService() {
 
 
@@ -287,7 +288,7 @@ function addService() {
     var name = document.getElementById("serviceName").value;
     var price = document.getElementById("price").value;
     var desc = document.getElementById("desc").value;
-    var photo = "images/arabsstock_52227_large.jpg";
+    var photo = "images/portraitGirl4.jpg.jpg";
 
 
     //  التحقق من الحقول الفارغة
@@ -356,7 +357,6 @@ function addService() {
 
 
 /*-------------------------------------------------Provider dashboard page------------------------------------------------------*/
-
 document.addEventListener("DOMContentLoaded", function () {
 
     var container = document.getElementById("serviceList");
@@ -382,7 +382,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
 
 
 /*-------------------------------------------------Manage staff member page------------------------------------------------------*/
@@ -619,6 +618,7 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
 
 
 
