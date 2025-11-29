@@ -205,6 +205,10 @@ if (submitBtn_RS != null) {
         );
 
         if (stay) {
+
+            document.getElementById("recent-request").style.display = "block"; 
+ requestsContainer_RS.style.display = "block";
+
             requestsContainer_RS.innerHTML += `
                 <div class="single-request">
                     <p><strong>Service:</strong> ${serviceField_rs}</p>
@@ -618,7 +622,6 @@ aboutForm.onsubmit = function() {
 };
 
 }
-
 
 
 
