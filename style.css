@@ -1101,7 +1101,7 @@ tr:hover td{
             height: 500px;
             border-style:hidden;
             padding: 10px;
-            background-color: #3d512e;
+            background-color: #e0e1d2;
             text-align: left;
             display: flex;
             flex-direction: column;
@@ -1647,6 +1647,7 @@ textarea { width: 100%;}
     .btn:hover{ background:#ddd; }
 
 .description{margin: 25px;}
+
 
 
 
