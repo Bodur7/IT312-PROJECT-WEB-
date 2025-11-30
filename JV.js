@@ -1,5 +1,6 @@
 
 
+
 function toggleMenu() { //shows the navigation
   const nav = document.getElementById("navLinks");
   if(!nav) return;
@@ -23,33 +24,31 @@ function toggleTheme() {//changes the theme using class
   
 }
 //////////////////////////====back to top button============================////
-const backToTopBtn = document.getElementById("backToTop");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (backToTopBtn) {
+  console.log("JS loaded ✅");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 200) {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  if (!backToTopBtn) {
+    return;
+  }
+
+  window.addEventListener("scroll", () => {
+    
+
+    if (window.scrollY > 100) {
       backToTopBtn.style.display = "block";
     } else {
       backToTopBtn.style.display = "none";
     }
   });
 
-  backToTopBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    console.log("Back to Top clicked ✅");
-
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-}
+});
 //====================Clock at footer=======================//////
 const clock= document.getElementById("clock");
 if(clock){
@@ -622,15 +621,3 @@ aboutForm.onsubmit = function() {
 };
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
