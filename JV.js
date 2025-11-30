@@ -291,7 +291,7 @@ function addService() {
     var name = document.getElementById("serviceName").value;
     var price = document.getElementById("price").value;
     var desc = document.getElementById("desc").value;
-    var photo = "images/portraitGirl4.jpg.jpg";
+  var photo = "images/services/arabsstock_52227_large.jpg";
 
 
     //  التحقق من الحقول الفارغة
@@ -621,3 +621,4 @@ aboutForm.onsubmit = function() {
 };
 
 }
+
